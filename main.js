@@ -166,13 +166,70 @@ de manera ascendente si el tercero es true o descendente si es false  /*/
 
 console.log(ejercicio(beersNew, "ibu", false)); */
 
+// function ejer2 (beers,percentage){
+//   let nuevasCervezas = beers.filter((objeto) => {if (objeto.abv < percentage)
+//   {return objeto}
+//   });
+//   return nuevasCervezas;
+// }
 
-function ejer2 (beers,percentage){
-  let nuevasCervezas = beers.filter((objeto) => {if (objeto.abv < percentage)
-  {return objeto}
+// let filterBeers = ejer2(beers, 4.5)
+// console.log(filterBeers
+
+
+
+///2///////////////////////////FILTER+MAP//////////////////
+// 2) Generar una funcion que reciba como parametro el array de cervezas y 
+// un valor de alcohol (numero). La funcion debe devolver un nuevo array con
+// las cervezas que no excedan el nivel etílico. Cada elemento del nuevo array
+// debe ser un objeto que tenga sólo las propiedades name, (alcohol) abv y ("amargor") ibu
+// para las 12:15 tiramos ruleta a ver hasta donde llegaron
+
+function filtrarPorAlcohol(beers, alcohol) {
+  let cervezasFiltradas = beers.filter(function (beer) {
+    return beer.abv <= alcohol;
   });
-  return nuevasCervezas;
+
+  let cervezasMap = cervezasFiltradas.map(function (beerMap) {
+    let aux = {
+      nombre: beerMap.name,
+      abv: beerMap.abv,
+      ibu: beerMap.ibu,
+    };
+   return aux
+  });
+
+  return cervezasMap;
 }
 
-let filterBeers = ejer2(beers, 4.5)
-console.log(filterBeers)
+
+//3//////////////////////////SORT//////////////////////////
+// 3) Generar una función que reciba como parámetro un array de cervezas
+// y devuelva un nuevo array con las 10 cervezas más alcohólicas
+
+function masAlcoholicas(beers){
+  let ordenado = [...beers].sort((a,b) => b.abv - a["abv"]).slice(0,10) 
+return ordenado
+}
+
+//console.log
+masAlcoholicas(beers)
+
+///4//////////////////////////////////////////SORT
+// 4) Generar una función que reciba como parámetro un array
+// de cervezas y devuelva un nuevo array con las 10 cervezas menos amargas
+
+function menosAlcoholicas(beers){
+let aux = beers.filter(beer=> beer.ibu)
+return aux.sort ((a,b) => a ["ibu"] - b["ibu"]).slice(0,10)
+}
+
+// console.table
+menosAlcoholicas(beers)
+
+
+///5/////////////////////////////////////////
+// 5) Generar una función que reciba como parámetro un array de cervezas
+// un nombre de propiedad y un valor booleano. Debe devolver un nuevo array
+// con 10 cervezas ordenadas por la propiedad ingresada como segundo argumento
+// de manera ascendente si el tercero es true o descendente si es false
