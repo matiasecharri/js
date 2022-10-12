@@ -20,19 +20,19 @@ console.log(filterBeers(beers, 5)); */
 
 /* ejercicio 2 */
 
-function filterParam(beers) {
-  let beersNew = [];
-  for (const beer of beers) {
-    let beerNew = {};
-    beerNew.name = beer.name;
-    beerNew.abv = beer.abv;
-    beerNew.ibu = beer.ibu;
-    beersNew.push(beerNew);
-  }
-  return beersNew;
-}
+// function filterParam(beers) {
+//   let beersNew = [];
+//   for (const beer of beers) {
+//     let beerNew = {};
+//     beerNew.name = beer.name;
+//     beerNew.abv = beer.abv;
+//     beerNew.ibu = beer.ibu;
+//     beersNew.push(beerNew);
+//   }
+//   return beersNew;
+// }
 
-let beersNew = filterParam(beers);
+// let beersNew = filterParam(beers);
 
 /*/ beerNew es mi nuevo array de cervezas para que no se me haga tan largo cuando lo veo en la consola /*/
 
@@ -165,3 +165,14 @@ de manera ascendente si el tercero es true o descendente si es false  /*/
 }
 
 console.log(ejercicio(beersNew, "ibu", false)); */
+
+
+function ejer2 (beers,percentage){
+  let nuevasCervezas = beers.filter((objeto) => {if (objeto.abv < percentage)
+  {return objeto}
+  });
+  return nuevasCervezas;
+}
+
+let filterBeers = ejer2(beers, 4.5)
+console.log(filterBeers)
