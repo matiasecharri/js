@@ -526,7 +526,7 @@ function personajesPorCasa(array, casa) {
        return personaje;
    
   }); //Aca coloque un sort para poder ordenarlos por fecha de nacimiento
-    let personajesFiltradosYmapeadosYOrdenados = personajesFiltradosYmapeados.sort((a,b)=> b.edad - a.edad)
+    let personajesFiltradosYmapeadosYOrdenados = personajesFiltradosYmapeados.sort((a,b)=> b.edad - a.edad).slice(0,10) //Aca coloque un sort para que solo me muestre 10 personajes.
     return personajesFiltradosYmapeadosYOrdenados
   
 }
@@ -534,3 +534,10 @@ function personajesPorCasa(array, casa) {
 console.table (personajesPorCasa(harry,"Gryffindor"))
 
 //Podriamos colocar un .reverse si quisieramos ordenarlos al reves, aunque tambien podriamos hacer un a - b y seria lo mismo.
+
+// Repasando todo lo que hicimos:
+// Creamos una funcion y le colocamos como parametros ARRAY y CASA,
+// Usamos .filter para poder filtrar por casa a los personajes.
+// Usamos .map para que los objetos de nuestro array solo tengan las propiedades que queremos mostrar.
+// Usamos .sort para que los objetos se ordenen segun la fecha de nacimiento de menor a mayor.
+// Usamos .slice luego del sort para que nos muestre un máximo de 10 personajes,
