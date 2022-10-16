@@ -402,27 +402,29 @@ console.log(ejercicio(beersNew, "ibu", false)); */
 // debe ser un objeto que tenga sólo las propiedades name, (alcohol) abv y ("amargor") ibu
 // para las 12:15 tiramos ruleta a ver hasta donde llegaron
 
-function cervezas(array, valorDeAlcohol) { //Aca estoy poniendo como parametros  "ARRAY" y "VALORDEALCOHOL" que es básicamente lo que 
-  // me pide el ejercicio 
+function cervezas(array, valorDeAlcohol) {
+  //Aca estoy poniendo como parametros  "ARRAY" y "VALORDEALCOHOL" que es básicamente lo que
+  // me pide el ejercicio
 
   //Ahora voy a hacer una nueva variable, donde voy a guardar las cervezas filtradas
-  let cervezasFiltradas = array.filter(function (i) {  //Y utilizo el .filter sobre el parametro "array", luego coloco una funcion dentro del
+  let cervezasFiltradas = array.filter(function (i) {
+    //Y utilizo el .filter sobre el parametro "array", luego coloco una funcion dentro del
     // .filter porque sino no funciona, donde le digo que utilice (i) el objeto dentro de ARRAY, y me returne el iabv<valordealcohol
     return i.abv < valorDeAlcohol;
-  });// en este punto ya tengo las cervezas filtradas, solo que ahora voy a necesitar que tengan 3 caracteristicas nada más, para eso
-  // voy a utilizar el .map, entonces creo una nueva variable a la que esta vez le voy a poner fitlradas y mapeadas, 
+  }); // en este punto ya tengo las cervezas filtradas, solo que ahora voy a necesitar que tengan 3 caracteristicas nada más, para eso
+  // voy a utilizar el .map, entonces creo una nueva variable a la que esta vez le voy a poner fitlradas y mapeadas,
   // ademas voy a hacer que sea = a las cervezas que ya filtre, porque sino estaría volviendo al array entero
 
-  let cervezasFiltradasMapeadas = cervezasFiltradas.map(function (i){
+  let cervezasFiltradasMapeadas = cervezasFiltradas.map(function (i) {
     // vuelvo a crear la variable como antes y le hago un map a las cervezas filtradas.
     // return {name: i.name, abv: i.abv, ibu: i.ibu };
-let cervezaMapeada = {} 
-// luego creo un objeto vacio que es donde voy a colocar las propiedades mapeadas del array.
-cervezaMapeada.name = i.name
-cervezaMapeada.abv = i.abv
-cervezaMapeada.ibu = i.ibu //aqui coloco las  3 propiedas y luego le pido que me devuelva el objeto.
-return cervezaMapeada
-  })
+    let cervezaMapeada = {};
+    // luego creo un objeto vacio que es donde voy a colocar las propiedades mapeadas del array.
+    cervezaMapeada.name = i.name;
+    cervezaMapeada.abv = i.abv;
+    cervezaMapeada.ibu = i.ibu; //aqui coloco las  3 propiedas y luego le pido que me devuelva el objeto.
+    return cervezaMapeada;
+  });
 
   return cervezasFiltradasMapeadas; //aca le voy a pedir que me devuelva ya las cervezas filtradas y mapeadas
 }
@@ -457,21 +459,16 @@ console.table(cervezas(beers, 5)); //finalmente inicializamos la funcion "cervez
 // return cervezas
 // }
 
-
 // console.table(chela (array))
 
 // //EJERCICIOS CERVEZAS 4
-
-
 
 // function cervecita (array){
 // let cervezas = array.sort((a,b)=>(a.ibu - b.ibu)).splice(0,10)
 // return cervezas
 // }
 
-
 // console.table(cervecita (array))
-
 
 //EJERCICIOS CERVEZAS 5
 
@@ -480,51 +477,29 @@ console.table(cervezas(beers, 5)); //finalmente inicializamos la funcion "cervez
 //   if (booleano){
 //     let ascendente = array.sort ((a,b)=>{
 
-
-
-
-
-
 //     })
-  
-  
-  
-  
-  
-  
-  
+
 //     }
-
-
 
 // }
 
-
-function lasCervezas (array, value){
-let cervezasFiltradas = array.filter(function (i){
-return i.abv < value
+function unaVezMas (array, valorAlcoholico){
+let cervezasConFiltro = array.filter(function (i){
+  return i.abv <= valorAlcoholico
+  
 })
-let cervezasFiltradasYMapeadas = cervezasFiltradas.map(function(i){
-let cajonVacio = {}
-cajonVacio.name = i.name
-cajonVacio.abv = i.abv
-cajonVacio.ibu = i.ibu
-cajonVacio.ph = i.ph
 
-return cajonVacio
+let cervezasConFiltroYMapa = cervezasConFiltro.map(function (i){
+return {nombre: i.name, ibu: i.ibu, abv: i.abv}
 
 
 })
 
-let enReversa = cervezasFiltradasYMapeadas.reverse(function (i){
+let cervezasDadasVuelta = cervezasConFiltroYMapa.reverse(function (i){})
+return cervezasDadasVuelta
 
 
-})
-
-return enReversa
 
 }
 
-
-console.table (lasCervezas(beers,5))
-
+console.table(unaVezMas(beers,5))
