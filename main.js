@@ -402,34 +402,34 @@ console.log(ejercicio(beersNew, "ibu", false)); */
 // debe ser un objeto que tenga sólo las propiedades name, (alcohol) abv y ("amargor") ibu
 // para las 12:15 tiramos ruleta a ver hasta donde llegaron
 
-function cervezas(array, valorDeAlcohol) {
-  //Aca estoy poniendo como parametros  "ARRAY" y "VALORDEALCOHOL" que es básicamente lo que
-  // me pide el ejercicio
+// function cervezas(array, valorDeAlcohol) {
+//   //Aca estoy poniendo como parametros  "ARRAY" y "VALORDEALCOHOL" que es básicamente lo que
+//   // me pide el ejercicio
 
-  //Ahora voy a hacer una nueva variable, donde voy a guardar las cervezas filtradas
-  let cervezasFiltradas = array.filter(function (i) {
-    //Y utilizo el .filter sobre el parametro "array", luego coloco una funcion dentro del
-    // .filter porque sino no funciona, donde le digo que utilice (i) el objeto dentro de ARRAY, y me returne el iabv<valordealcohol
-    return i.abv < valorDeAlcohol;
-  }); // en este punto ya tengo las cervezas filtradas, solo que ahora voy a necesitar que tengan 3 caracteristicas nada más, para eso
-  // voy a utilizar el .map, entonces creo una nueva variable a la que esta vez le voy a poner fitlradas y mapeadas,
-  // ademas voy a hacer que sea = a las cervezas que ya filtre, porque sino estaría volviendo al array entero
+//   //Ahora voy a hacer una nueva variable, donde voy a guardar las cervezas filtradas
+//   let cervezasFiltradas = array.filter(function (i) {
+//     //Y utilizo el .filter sobre el parametro "array", luego coloco una funcion dentro del
+//     // .filter porque sino no funciona, donde le digo que utilice (i) el objeto dentro de ARRAY, y me returne el iabv<valordealcohol
+//     return i.abv < valorDeAlcohol;
+//   }); // en este punto ya tengo las cervezas filtradas, solo que ahora voy a necesitar que tengan 3 caracteristicas nada más, para eso
+//   // voy a utilizar el .map, entonces creo una nueva variable a la que esta vez le voy a poner fitlradas y mapeadas,
+//   // ademas voy a hacer que sea = a las cervezas que ya filtre, porque sino estaría volviendo al array entero
 
-  let cervezasFiltradasMapeadas = cervezasFiltradas.map(function (i) {
-    // vuelvo a crear la variable como antes y le hago un map a las cervezas filtradas.
-    // return {name: i.name, abv: i.abv, ibu: i.ibu };
-    let cervezaMapeada = {};
-    // luego creo un objeto vacio que es donde voy a colocar las propiedades mapeadas del array.
-    cervezaMapeada.name = i.name;
-    cervezaMapeada.abv = i.abv;
-    cervezaMapeada.ibu = i.ibu; //aqui coloco las  3 propiedas y luego le pido que me devuelva el objeto.
-    return cervezaMapeada;
-  });
+//   let cervezasFiltradasMapeadas = cervezasFiltradas.map(function (i) {
+//     // vuelvo a crear la variable como antes y le hago un map a las cervezas filtradas.
+//     // return {name: i.name, abv: i.abv, ibu: i.ibu };
+//     let cervezaMapeada = {};
+//     // luego creo un objeto vacio que es donde voy a colocar las propiedades mapeadas del array.
+//     cervezaMapeada.name = i.name;
+//     cervezaMapeada.abv = i.abv;
+//     cervezaMapeada.ibu = i.ibu; //aqui coloco las  3 propiedas y luego le pido que me devuelva el objeto.
+//     return cervezaMapeada;
+//   });
 
-  return cervezasFiltradasMapeadas; //aca le voy a pedir que me devuelva ya las cervezas filtradas y mapeadas
-}
+//   return cervezasFiltradasMapeadas; //aca le voy a pedir que me devuelva ya las cervezas filtradas y mapeadas
+// }
 
-console.table(cervezas(beers, 5)); //finalmente inicializamos la funcion "cervezas" la cual cuenta con un array filtrado y posteriormente mapeado que devuelve lo que buscabamos.
+// console.table(cervezas(beers, 5)); //finalmente inicializamos la funcion "cervezas" la cual cuenta con un array filtrado y posteriormente mapeado que devuelve lo que buscabamos.
 
 // 3) Generar una función que reciba como parámetro un array de cervezas
 // y devuelva un nuevo array con las 10 cervezas más alcohólicas
@@ -485,17 +485,24 @@ console.table(cervezas(beers, 5)); //finalmente inicializamos la funcion "cervez
 
 //Aca repito el ejercicio de las cervezas, esta vez dando vuelta el array agregando un .reverse
 
-function ultimoTry(array, value) {
-  let filterBeers = array.filter(function (i) {
+function unaVezMas(array, value) {
+  let cervezasFiltradas = array.filter((i) => {
     return i.abv < value;
   });
 
-  let filterAndMapedBeers = filterBeers.map(function (i) {
-    return { nombre: i.name, abv: i.abv, ibu: i.ibu };
+  let cervezasFiltradasYMapeadas = cervezasFiltradas.map((i) => {
+   return{Nombre: i.name, Amargor: i.ibu, Graduacion: i.abv}
+   
+//     let cajonVacio = {}
+//    cajonVacio.Nombre = i.name
+//    cajonVacio.Amargor = i.ibu
+//    cajonVacio.Graduacion = i.abv
+// return cajonVacio
   });
-
-  let reversedBeers = filterAndMapedBeers.reverse(function (i) {});
-  return reversedBeers;
+  
+  let cervezasFiltradasYmapeadasYenReversa = cervezasFiltradasYMapeadas.reverse((i)=>{})
+  return cervezasFiltradasYmapeadasYenReversa
+  
 }
 
-console.table(ultimoTry(beers, 5));
+console.table(unaVezMas(beers, 5));
