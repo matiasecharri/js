@@ -483,23 +483,19 @@ console.table(cervezas(beers, 5)); //finalmente inicializamos la funcion "cervez
 
 // }
 
-function unaVezMas (array, valorAlcoholico){
-let cervezasConFiltro = array.filter(function (i){
-  return i.abv <= valorAlcoholico
-  
-})
+//Aca repito el ejercicio de las cervezas, esta vez dando vuelta el array agregando un .reverse
 
-let cervezasConFiltroYMapa = cervezasConFiltro.map(function (i){
-return {nombre: i.name, ibu: i.ibu, abv: i.abv}
+function ultimoTry(array, value) {
+  let filterBeers = array.filter(function (i) {
+    return i.abv < value;
+  });
 
+  let filterAndMapedBeers = filterBeers.map(function (i) {
+    return { nombre: i.name, abv: i.abv, ibu: i.ibu };
+  });
 
-})
-
-let cervezasDadasVuelta = cervezasConFiltroYMapa.reverse(function (i){})
-return cervezasDadasVuelta
-
-
-
+  let reversedBeers = filterAndMapedBeers.reverse(function (i) {});
+  return reversedBeers;
 }
 
-console.table(unaVezMas(beers,5))
+console.table(ultimoTry(beers, 5));
