@@ -432,21 +432,21 @@ console.table(cervezas(beers, 5)); //finalmente inicializamos la funcion "cervez
 // 3) Generar una función que reciba como parámetro un array de cervezas
 // y devuelva un nuevo array con las 10 cervezas más alcohólicas
 
-function suma (parametro1, parametro2){
-let objeto = {}
-objeto.caracteristica1 = parametro1
-objeto.caracteristica2 = parametro2
-objeto.caracteristica3 = parametro1 + parametro2
-if (objeto.caracteristica2 + objeto.caracteristica1 === 100){
-  objeto.caracteristica4 = "El objeto es King Calvi"
-} else if (objeto.caracteristica2 + objeto.caracteristica1 !== 100){
-  objeto.caracteristica4 = "El objeto no es el King"
-}
+// function suma (parametro1, parametro2){
+// let objeto = {}
+// objeto.caracteristica1 = parametro1
+// objeto.caracteristica2 = parametro2
+// objeto.caracteristica3 = parametro1 + parametro2
+// if (objeto.caracteristica2 + objeto.caracteristica1 === 100){
+//   objeto.caracteristica4 = "El objeto es King Calvi"
+// } else if (objeto.caracteristica2 + objeto.caracteristica1 !== 100){
+//   objeto.caracteristica4 = "El objeto no es el King"
+// }
 
-return objeto
-}
+// return objeto
+// }
 
-console.log(suma(50,50))
+// console.log(suma(50,50))
 
 //La funcion flecha es = a (parametro) => {condicion de la funcion} (en el caso de que sea solo una linea no hace falta poner las llaves (y en el caso de ser un objeto se hace de la siguiente forma: ({objeto})    ) y ademas la flecha reemplaza el return)
 
@@ -498,3 +498,33 @@ console.log(suma(50,50))
 
 
 // }
+
+
+function lasCervezas (array, value){
+let cervezasFiltradas = array.filter(function (i){
+return i.abv < value
+})
+let cervezasFiltradasYMapeadas = cervezasFiltradas.map(function(i){
+let cajonVacio = {}
+cajonVacio.name = i.name
+cajonVacio.abv = i.abv
+cajonVacio.ibu = i.ibu
+cajonVacio.ph = i.ph
+
+return cajonVacio
+
+
+})
+
+let enReversa = cervezasFiltradasYMapeadas.reverse(function (i){
+
+
+})
+
+return enReversa
+
+}
+
+
+console.table (lasCervezas(beers,5))
+
