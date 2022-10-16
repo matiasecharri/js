@@ -485,24 +485,44 @@ console.log(ejercicio(beersNew, "ibu", false)); */
 
 //Aca repito el ejercicio de las cervezas, esta vez dando vuelta el array agregando un .reverse
 
-function unaVezMas(array, value) {
-  let cervezasFiltradas = array.filter((i) => {
-    return i.abv < value;
-  });
+// function unaVezMas(array, value) {
+//   let cervezasFiltradas = array.filter((i) => {
+//     return i.abv < value;
+//   });
 
-  let cervezasFiltradasYMapeadas = cervezasFiltradas.map((i) => {
-   return{Nombre: i.name, Amargor: i.ibu, Graduacion: i.abv}
-   
-//     let cajonVacio = {}
-//    cajonVacio.Nombre = i.name
-//    cajonVacio.Amargor = i.ibu
-//    cajonVacio.Graduacion = i.abv
-// return cajonVacio
+//   let cervezasFiltradasYMapeadas = cervezasFiltradas.map((i) => {
+//    return{Nombre: i.name, Amargor: i.ibu, Graduacion: i.abv}
+
+// //     let cajonVacio = {}
+// //    cajonVacio.Nombre = i.name
+// //    cajonVacio.Amargor = i.ibu
+// //    cajonVacio.Graduacion = i.abv
+// // return cajonVacio
+//   });
+
+//   let cervezasFiltradasYmapeadasYenReversa = cervezasFiltradasYMapeadas.reverse((i)=>{})
+//   return cervezasFiltradasYmapeadasYenReversa
+
+// }
+
+// console.table(unaVezMas(beers, 5));
+
+function personajesPorCasa(array, casa) {
+  let personajesFiltrados = array.filter(function (i) {
+    return i.house === casa;
   });
-  
-  let cervezasFiltradasYmapeadasYenReversa = cervezasFiltradasYMapeadas.reverse((i)=>{})
-  return cervezasFiltradasYmapeadasYenReversa
+  let personajesFiltradosYmapeados = personajesFiltrados.map(function (i) {
+    let personaje = {};
+    personaje.Nombre = i.name;
+    personaje.Casa = i.house;
+    personaje.Ancestros = i.ancestry;
+    personaje.Patronus = i.patronus;
+   personaje.edad = i.yearOfBirth - 1997
+       return personaje;
+   
+  });
+    return personajesFiltradosYmapeados;
   
 }
 
-console.table(unaVezMas(beers, 5));
+console.table (personajesPorCasa(harry,"Gryffindor"))
