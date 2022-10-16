@@ -507,22 +507,30 @@ console.log(ejercicio(beersNew, "ibu", false)); */
 
 // console.table(unaVezMas(beers, 5));
 
+
+//Hice la actividad de las cervezas, pero esta vez con un API de Harry Potter, api2, lo primero que hice fue vincularlo al INDEX para poder utilizarlo.
+
 function personajesPorCasa(array, casa) {
   let personajesFiltrados = array.filter(function (i) {
-    return i.house === casa;
+    return i.house === casa; //Aca coloque un filter para que solo me devuelva personajes de casas en especifico.
   });
-  let personajesFiltradosYmapeados = personajesFiltrados.map(function (i) {
+
+  //Aca coloque un map para que no muestre tantos datos por personaje solo Nombre, Casa, Ancestros, Patronus y Edad
+  let personajesFiltradosYmapeados = personajesFiltrados.map(function (i) { 
     let personaje = {};
     personaje.Nombre = i.name;
     personaje.Casa = i.house;
     personaje.Ancestros = i.ancestry;
     personaje.Patronus = i.patronus;
-   personaje.edad = i.yearOfBirth - 1997
+   personaje.edad = i.yearOfBirth - 1998 
        return personaje;
    
-  });
-    return personajesFiltradosYmapeados;
+  }); //Aca coloque un sort para poder ordenarlos por fecha de nacimiento
+    let personajesFiltradosYmapeadosYOrdenados = personajesFiltradosYmapeados.sort((a,b)=> b.edad - a.edad)
+    return personajesFiltradosYmapeadosYOrdenados
   
 }
 
 console.table (personajesPorCasa(harry,"Gryffindor"))
+
+//Podriamos colocar un .reverse si quisieramos ordenarlos al reves, aunque tambien podriamos hacer un a - b y seria lo mismo.
