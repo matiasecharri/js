@@ -507,31 +507,30 @@ console.log(ejercicio(beersNew, "ibu", false)); */
 
 // console.table(unaVezMas(beers, 5));
 
-
 //Hice la actividad de las cervezas, pero esta vez con un API de Harry Potter, api2, lo primero que hice fue vincularlo al INDEX para poder utilizarlo.
 
-function personajesPorCasa(array, casa) {
-  let personajesFiltrados = array.filter(function (i) {
-    return i.house === casa; //Aca coloque un filter para que solo me devuelva personajes de casas en especifico.
-  });
+// function personajesPorCasa(array, casa) {
+//   let personajesFiltrados = array.filter(function (i) {
+//     return i.house === casa; //Aca coloque un filter para que solo me devuelva personajes de casas en especifico.
+//   });
 
-  //Aca coloque un map para que no muestre tantos datos por personaje solo Nombre, Casa, Ancestros, Patronus y Edad
-  let personajesFiltradosYmapeados = personajesFiltrados.map(function (i) { 
-    let personaje = {};
-    personaje.Nombre = i.name;
-    personaje.Casa = i.house;
-    personaje.Ancestros = i.ancestry;
-    personaje.Patronus = i.patronus;
-   personaje.edad = i.yearOfBirth - 1998 
-       return personaje;
-   
-  }); //Aca coloque un sort para poder ordenarlos por fecha de nacimiento
-    let personajesFiltradosYmapeadosYOrdenados = personajesFiltradosYmapeados.sort((a,b)=> b.edad - a.edad).slice(0,10) //Aca coloque un sort para que solo me muestre 10 personajes.
-    return personajesFiltradosYmapeadosYOrdenados
-  
-}
+//   //Aca coloque un map para que no muestre tantos datos por personaje solo Nombre, Casa, Ancestros, Patronus y Edad
+//   let personajesFiltradosYmapeados = personajesFiltrados.map(function (i) {
+//     let personaje = {};
+//     personaje.Nombre = i.name;
+//     personaje.Casa = i.house;
+//     personaje.Ancestros = i.ancestry;
+//     personaje.Patronus = i.patronus;
+//    personaje.edad = i.yearOfBirth - 1998
+//        return personaje;
 
-console.table (personajesPorCasa(harry,"Gryffindor"))
+//   }); //Aca coloque un sort para poder ordenarlos por fecha de nacimiento
+//     let personajesFiltradosYmapeadosYOrdenados = personajesFiltradosYmapeados.sort((a,b)=> b.edad - a.edad).slice(0,10) //Aca coloque un sort para que solo me muestre 10 personajes.
+//     return personajesFiltradosYmapeadosYOrdenados
+
+// }
+
+// console.table (personajesPorCasa(harry,"Gryffindor"))
 
 //Podriamos colocar un .reverse si quisieramos ordenarlos al reves, aunque tambien podriamos hacer un a - b y seria lo mismo.
 
@@ -541,3 +540,53 @@ console.table (personajesPorCasa(harry,"Gryffindor"))
 // Usamos .map para que los objetos de nuestro array solo tengan las propiedades que queremos mostrar.
 // Usamos .sort para que los objetos se ordenen segun la fecha de nacimiento de menor a mayor.
 // Usamos .slice luego del sort para que nos muestre un máximo de 10 personajes,
+
+// function personajesPerHouse(arrayPotter, casa) {
+//   let personajesFiltradosPorCasa = arrayPotter.filter(function (i) {
+//     return i.house === casa;
+//   });
+
+//   let personajesFiltradosPorCasaYmapeados = personajesFiltradosPorCasa.map(
+//     function (i) {
+//       return {
+//         nombre: i.name,
+//         casa: i.house,
+//         patronus: i.patronus,
+//         edad: i.yearOfBirth - 1998,
+//       };
+//     }
+//   );
+
+//   let personajesFiltradosPorCasaYmapeadosySorteados =
+//     personajesFiltradosPorCasaYmapeados
+//       .sort((a, b) => b.edad - a.edad)
+//       .slice(0, 6);
+//   return personajesFiltradosPorCasaYmapeadosySorteados;
+// }
+
+// console.table(personajesPerHouse(harry, "Gryffindor"));
+
+
+//Codigo optimizado con función flecha yahorrando el mayor espacio posible, ademas se agrega el parametro genero.
+
+function harryOtraVez(array, genero, casa) {
+  let personajesFiltradosPorGeneroYCasa = array.filter((i) => {
+    return i.gender === genero && i.house === casa;
+  });
+
+  let personajesFiltradosPorGeneroYcasaYmapeados =
+    personajesFiltradosPorGeneroYCasa.map((i) => {
+      return {
+        nombre: i.name,
+        casa: i.house,
+        genero: i.gender,
+        edad: i.yearOfBirth - 1998,
+      };
+    });
+
+  let personajesFiltradosPorGeneroYcasaYmapeadosYsorteados =
+    personajesFiltradosPorGeneroYcasaYmapeados.sort((a, b) => b.edad - a.edad).slice(0,5);
+  return personajesFiltradosPorGeneroYcasaYmapeadosYsorteados;
+}
+
+console.table(harryOtraVez(harry, "male", "Gryffindor"));
