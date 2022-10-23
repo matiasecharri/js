@@ -566,27 +566,102 @@ console.log(ejercicio(beersNew, "ibu", false)); */
 
 // console.table(personajesPerHouse(harry, "Gryffindor"));
 
-
 //Codigo optimizado con función flecha yahorrando el mayor espacio posible, ademas se agrega el parametro genero.
 
-function harryOtraVez(array, genero, casa) {
-  let personajesFiltradosPorGeneroYCasa = array.filter((i) => {
-    return i.gender === genero && i.house === casa;
-  });
+// function harryOtraVez(array, genero, casa) {
+//   let personajesFiltradosPorGeneroYCasa = array.filter((i) => {
+//     return i.gender === genero && i.house === casa;
+//   });
 
-  let personajesFiltradosPorGeneroYcasaYmapeados =
-    personajesFiltradosPorGeneroYCasa.map((i) => {
-      return {
-        nombre: i.name,
-        casa: i.house,
-        genero: i.gender,
-        edad: i.yearOfBirth - 1998,
-      };
-    });
+//   let personajesFiltradosPorGeneroYcasaYmapeados =
+//     personajesFiltradosPorGeneroYCasa.map((i) => {
+//       return {
+//         nombre: i.name,
+//         casa: i.house,
+//         genero: i.gender,
+//         edad: i.yearOfBirth - 1998,
+//       };
+//     });
 
-  let personajesFiltradosPorGeneroYcasaYmapeadosYsorteados =
-    personajesFiltradosPorGeneroYcasaYmapeados.sort((a, b) => b.edad - a.edad).slice(0,5);
-  return personajesFiltradosPorGeneroYcasaYmapeadosYsorteados;
+//   let personajesFiltradosPorGeneroYcasaYmapeadosYsorteados =
+//     personajesFiltradosPorGeneroYcasaYmapeados
+//       .sort((a, b) => b.edad - a.edad)
+//       .slice(0, 5);
+//   return personajesFiltradosPorGeneroYcasaYmapeadosYsorteados;
+// }
+
+// console.table(harryOtraVez(harry, "male", "Gryffindor"));
+
+// ---------------------------------------------------------------------------------------------------------------------------------------
+
+//En este ejercicio hay que prohibir o habilitar la entrada a un boliche.
+
+// function boliche(nombre, edad, vip) {
+//   if (edad >= 18) {
+//     if (vip) {
+//       console.log(nombre + " es mayor de edad y tiene VIP.");
+//     } else if (edad >= 18) {
+//       console.log(nombre + " puede ingresar al boliche porque tiene " + edad + " años, aunque no tiene VIP.");
+//     }
+//   } else {
+//     console.log(nombre + " no puede ingresar porque tiene " + edad + " años");
+//   }
+// }
+
+// boliche("Santi", 19, false);
+// boliche("Matias", 15, true);
+// boliche("Ezequiel", 25, true);
+// boliche("Hernan", 30, false);
+
+//---------------------------------------------------------------------------------------------------------------------------
+
+// En este ejercicio hay que crear una función de un gato haga caca sobre un array con elementos, por ejemplo que haga caca sobre un
+// cajon que tiene frutas y deberá mostrarse que hizo caca en cada elemento del array.
+
+let arenero = []; // El arenero de cocho, está vacío porque lo limpié recién.
+
+let cajonDeFrutasDeDibella = [
+  "naranja",
+  "banana",
+  "kiwi",
+  "mandarina",
+  "frutilla",
+  "manzana",
+];
+
+let cajonDeFrutasDeDibella2 = [
+  {
+    nombreFruta: "manzana",
+  },
+  {
+    nombreFruta: "banana",
+  },
+  {
+    nombreFruta: "kiwi",
+  },
+  {
+    nombreFruta: "mandarina",
+  },
+  {
+    nombreFruta: "frutilla",
+  },
+  {
+    nombreFruta: "naranja",
+  },
+];
+
+function cochoHaceCaca(parametro, depositoParaCacas) { //El primer parametro es el array a recorrer para saber cuantas cacas debe hacer, el segundo parametro es donde va a hacer las cacas.
+  if (parametro.length >= 0) {
+    for (i = 0; i < parametro.length; i++) {
+      depositoParaCacas.push(`Caca de Concho en tu ${[depositoParaCacas[i]]}`) ; // Agregando o quitando .frutas luego del [i] podemos meternos dentro del objeto de un array.
+    }
+  }
 }
+cochoHaceCaca(cajonDeFrutasDeDibella2, cajonDeFrutasDeDibella,);
 
-console.table(harryOtraVez(harry, "male", "Gryffindor"));
+
+
+document.write(cajonDeFrutasDeDibella);
+console.log(cajonDeFrutasDeDibella)
+
+// ALT GR + } 2 VECES = BACKTICK
