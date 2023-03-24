@@ -71,12 +71,14 @@ let pirate = {
 };
 
 let hulk = {
-  colorDePiel: "verder",
+  colorDePiel: "verde",
   edad: 40,
   twoHands: true,
   isHeAngry: undefined,
 };
 //4) Crear 2 arrays
+let hulkAndPirate = ["hulk", "pirate"];
+let pirateAndHulk = [pirate, hulk];
 
 //5)Crear un Objeto que tenga una propiedad de cada tipo de dato primitivo, ademas
 //debe contener otro objeto y ese objeto que contiene debe tener por lo menos 3 propiedades
