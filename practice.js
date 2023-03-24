@@ -52,7 +52,7 @@ let matiasEcharri = { //Objeto matiasEcharri
  
 };
 
-console.log(typeof matiasEcharri)
+console.log(matiasEcharri.colorDePiel)
 
 //1) Crear una variable de cada tipo de dato primitivo
 
