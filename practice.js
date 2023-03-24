@@ -101,7 +101,7 @@ let elNuevo = {
       "Proteina y Vainilla",
     ],
   },
-  conocmientos: {
+  conocimientos: {
     frontEnd: {
       html: "HTML5",
       css: ["CSS3", "Tailwind", "Boostrap", "MaterialUI"],
