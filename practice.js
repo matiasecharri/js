@@ -21,3 +21,11 @@ let nulo = null
 ///////////////////////ESTRUCTURAS BÁSICAS
 
 //OBJETOS
+
+let dibella = {
+    edad: 22,
+    nombre: "Diana",
+    pala: false,
+    ocupacion: "Estudiante y Nuevo en progreso"
+}
+
