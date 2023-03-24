@@ -18,3 +18,6 @@ let estaCastrado = true //Boolean
 let comioHoy = undefined
 let nulo = null
 
+///////////////////////ESTRUCTURAS BÁSICAS
+
+//OBJETOS
