@@ -53,7 +53,7 @@ let matiasEcharri = {
   cajonDeFrutas: frutas, //Ademas una propiedad que hace referencia a la variable frutas
 };
 
-console.log(matiasEcharri.colorDePiel);
+/////////////////////////////HOMEWORK
 
 //1) Crear una variable de cada tipo de dato primitivo
 let palabra = "Hola";
@@ -85,6 +85,32 @@ let pirateAndHulk = [pirate, hulk];
 // y una de esas propiedades debe ser un array
 //Ademas quiero que accedas y se muestre por consola la posicion 0 del array que se encuentra dentro del
 //objeto dentro del objeto.
+
+let elNuevo = {
+  nombre: "El Nuevo",
+  edad: 24,
+  tomaBatidos: true,
+  trabajoHoy: null,
+  trabajaraElLunes: undefined,
+  gustos: {
+    celular: "Iphone",
+    lentes: "Vogue",
+    batidosFavoritos: [
+      "Proteina",
+      "Proteina y Chocolate",
+      "Proteina y Vainilla",
+    ],
+  },
+  conocmientos: {
+    frontEnd: {
+      html: "HTML5",
+      css: ["CSS3", "Tailwind", "Boostrap", "MaterialUI"],
+      javascript: ["Javascript Vanilla", "Typescript", "ReactJS"],
+    },
+    backend: ["NodeJS", "Postman", ["MongoDB", "Mongoose"], "ExpressJS"],
+  },
+  nacidoEn: fechaDeNacimiento,
+};
 
 // Puntos extra: Que el objeto anterior tenga tambien como propiedad la constante
 // que hayas creado al principio y hacer un console.log de algun typeof
