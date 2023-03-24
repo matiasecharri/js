@@ -69,5 +69,5 @@ console.log(typeof matiasEcharri)
 //objeto dentro del objeto.
 
 // Puntos extra: Que el objeto anterior tenga tambien como propiedad la constante
-// que hayas creado al principio.
+// que hayas creado al principio y hacer un console.log de algun typeof
 
