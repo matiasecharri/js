@@ -114,7 +114,28 @@ let elNuevo = {
   nacidoEn: fechaDeNacimiento,
 };
 
-console.log(elNuevo.conocimientos.frontEnd.css[0]);
-
 // Puntos extra: Que el objeto anterior tenga tambien como propiedad la constante
 // que hayas creado al principio y hacer un console.log de algun typeof
+
+////////////////////////OPERADORES
+
+//ASIGNACION:
+let igual = "algo";
+//Existen 3 tipos de iguales =, ==, ===
+
+//ARITMÉTICOS:
+// + - * / %
+let suma = 5 + 5;
+let resta = 10 - 5;
+let multiplicacion = 4 * 2;
+let division = 8 / 2;
+let resto = 10 % 2;
+
+//DE COMPARACION:
+//Devuelven booleanos
+// > < >= <= != == ===
+let comparacion = 32 >= 32;
+let comparacion2 = 50 <= 5;
+let comparacionNoEstricta = 50 == "50"
+let comparactionEstrica = 50 === "50" //El unico ultra estricto
+let loContrario = 200 != 200 
