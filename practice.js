@@ -87,9 +87,7 @@ let pirateAndHulk = [pirate, hulk];
 //objeto dentro del objeto.
 
 let elNuevo = {
-  nombre: "El Nuevo",
-  photo:
-    "https://media.discordapp.net/attachments/763661782555426817/1088971818255274084/thenewone.png?width=466&height=468",
+  nombre: "El Nuevo", 
   edad: 24,
   tomaBatidos: true,
   trabajoHoy: null,
