@@ -112,5 +112,7 @@ let elNuevo = {
   nacidoEn: fechaDeNacimiento,
 };
 
+console.log(elNuevo.conocimientos.frontEnd.css[0])
+
 // Puntos extra: Que el objeto anterior tenga tambien como propiedad la constante
 // que hayas creado al principio y hacer un console.log de algun typeof
