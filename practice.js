@@ -114,10 +114,7 @@ let elNuevo = {
   nacidoEn: fechaDeNacimiento,
 };
 
-// Puntos extra: Que el objeto anterior tenga tambien como propiedad la constante
-// que hayas creado al principio y hacer un console.log de algun typeof
-
-////////////////////////OPERADORES
+////////////////////////OPERADORES////////////////////////////////////////////
 
 //ASIGNACION:
 let igual = "algo";
@@ -133,9 +130,18 @@ let resto = 10 % 2;
 
 //DE COMPARACION:
 //Devuelven booleanos
-// > < >= <= != == ===
+// > < >= <= != !== == ===
 let comparacion = 32 >= 32;
 let comparacion2 = 50 <= 5;
-let comparacionNoEstricta = 50 == "50"
-let comparactionEstrica = 50 === "50" //El unico ultra estricto
-let loContrario = 200 != 200 
+let comparacionNoEstricta = 50 == "50"; //No estricto
+let comparactionEstrica = 50 === "50"; //Estricto
+let loContrario = 200 != "200"; //No estricto
+let loContrarioEstricto = 200 !== "200"; //Estricto
+
+//LOGICOS:
+// || && !
+// PARA QUE SEA TRUE TODO TIENE QUE SER TRUE
+let comparacionLogicaConI = 100 > 0 && 0 > 4;
+
+// PARA QUE SEA TRUE ALGO TIENE QUE SER TRUE
+let comparacionConOr = 5 != 5 || 10 > 4;
