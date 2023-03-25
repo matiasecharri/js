@@ -86,33 +86,64 @@ let pirateAndHulk = [pirate, hulk];
 //Ademas quiero que accedas y se muestre por consola la posicion 0 del array que se encuentra dentro del
 //objeto dentro del objeto.
 
-let elNuevo = {
-  nombre: "El Nuevo",
-  edad: 24,
-  tomaBatidos: true,
-  trabajoHoy: null,
-  trabajaraElLunes: undefined,
-  gustos: {
-    celular: "Iphone",
-    lentes: "Vogue",
-    batidosFavoritos: [
-      "Proteina",
-      "Proteina y Chocolate",
-      "Proteina y Vainilla",
-    ],
-  },
-  conocimientos: {
-    frontEnd: {
-      html: "HTML5",
-      css: ["CSS3", "Tailwind", "Boostrap", "MaterialUI"],
-      javascript: ["Javascript Vanilla", "Typescript", "ReactJS"],
+let elNuevo = [
+  {
+    nombre: "El Nuevo",
+    photo:
+      "https://media.discordapp.net/attachments/763661782555426817/1088971818255274084/thenewone.png?width=466&height=468",
+    edad: 24,
+    tomaBatidos: true,
+    trabajoHoy: null,
+    trabajaraElLunes: undefined,
+    gustos: {
+      celular: "Iphone 14",
+      lentes: "Vogue",
+      batidosFavoritos: [
+        "Proteina",
+        "Proteina y Chocolate",
+        "Proteina y Vainilla",
+      ],
     },
-    backend: ["NodeJS", "Postman", ["MongoDB", "Mongoose"], "ExpressJS"],
+    conocimientos: {
+      frontEnd: {
+        html: "HTML5",
+        css: ["CSS3", "Tailwind", "Boostrap", "MaterialUI"],
+        javascript: ["Javascript Vanilla", "Typescript", "ReactJS"],
+      },
+      backend: ["NodeJS", "Postman", ["MongoDB", "Mongoose"], "ExpressJS"],
+    },
+    nacidoEn: fechaDeNacimiento,
   },
-  nacidoEn: fechaDeNacimiento,
-};
+];
 
-console.log(elNuevo.conocimientos.frontEnd.css[0])
+function printer(objeto) {
+  let main = document.getElementById("main1");
+  main.innerHTML = "";
+  objeto.forEach((x) => {
+    main.innerHTML += `
+    <div class="card">
+    <div class="part1">
+        <img src="${x.photo}" alt="" srcset="">
+    </div>    
+    <div class="part2">
+    <h3>Info:</h3>
+    <ul>Name: ${x.nombre}</ul>
+    <ul>Age: ${x.edad}</ul>
+    <h3>Items:</h3>
+    <ul>Phone:${x.gustos.celular}  </ul>
+    <ul>Glasses:${x.gustos.lentes}</ul>
+    <ul>Drinks: ${x.gustos.batidosFavoritos}</ul>
+    <h3>Knowledge</h3>
+    <ul>${x.conocimientos.frontEnd.html}</ul>
+    <ul>${x.conocimientos.frontEnd.css}</ul>
+    <ul>${x.conocimientos.frontEnd.javascript}</ul>
+    <ul>${x.conocimientos.backend}</ul>
+    </div>
+  </div>`;
+  });
+}
+
+printer(elNuevo);
 
 // Puntos extra: Que el objeto anterior tenga tambien como propiedad la constante
 // que hayas creado al principio y hacer un console.log de algun typeof
