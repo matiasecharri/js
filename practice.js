@@ -112,7 +112,59 @@ let elNuevo = {
   nacidoEn: fechaDeNacimiento,
 };
 
-console.log(elNuevo.conocimientos.frontEnd.css[0])
+////////////////////////OPERADORES////////////////////////////////////////////
 
-// Puntos extra: Que el objeto anterior tenga tambien como propiedad la constante
-// que hayas creado al principio y hacer un console.log de algun typeof
+//ASIGNACION:
+let igual = "algo";
+//Existen 3 tipos de iguales =, ==, ===
+
+//ARITMÉTICOS:
+// + - * / %
+let suma = 5 + 5;
+let resta = 10 - 5;
+let multiplicacion = 4 * 2;
+let division = 8 / 2;
+let resto = 10 % 2;
+
+//DE COMPARACION:
+//Devuelven booleanos
+// > < >= <= != !== == ===
+let comparacion = 32 >= 32;
+let comparacion2 = 50 <= 5;
+let comparacionNoEstricta = 50 == "50"; //No estricto
+let comparactionEstrica = 50 === "50"; //Estricto
+let loContrario = 200 != "200"; //No estricto
+let loContrarioEstricto = 200 !== "200"; //Estricto
+
+//LOGICOS:
+// || && !
+// PARA QUE SEA TRUE TODO TIENE QUE SER TRUE
+let comparacionLogicaConI = 100 > 0 && 0 > 4;
+
+// PARA QUE SEA TRUE ALGO TIENE QUE SER TRUE
+let comparacionConOr = 5 != 5 || 10 > 4;
+
+//CONDICIONALES: if = SI // else if = SINO, SI // else = SINO
+
+// IF me pisa un auto voy a ir al hospital, ELSE IF me pisa un camion voy a
+//quedar hecho bosta, ELSE buenisimo no me pasa nada!!!
+
+let mePisa = prompt();
+
+if (mePisa === "auto") {
+  console.log("Voy a ir al hospital");
+} else if (mePisa === "camion") {
+  console.log("Me hicieron bosta");
+} else if (mePisa === "motoneta") {
+  console.log("Bueno tampoco duele tanto jejeje");
+} else if (
+  mePisa === "lancha" ||
+  mePisa === "helicoptero" ||
+  mePisa === "avion"
+) {
+  console.log("Como diablos paso eso?");
+} else if (mePisa === "vaca" || mePisa === "vaquita") {
+  console.log("Sabíamos que este terrorifico día llegaría");
+} else {
+  console.log("Bueno creo que voy a estar bien");
+}

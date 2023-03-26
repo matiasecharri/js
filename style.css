@@ -1,0 +1,40 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: rgb(44, 43, 43);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.card {
+  height: 700px;
+  width: 450px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+
+.part1 {
+  height: 50%;
+  background-color: black;
+}
+
+.part1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.part2 {
+  display: flex;
+  background-color: antiquewhite;
+  height: 50%;
+  flex-direction: column;
+}
