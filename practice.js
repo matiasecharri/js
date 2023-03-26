@@ -87,7 +87,7 @@ let pirateAndHulk = [pirate, hulk];
 //objeto dentro del objeto.
 
 let elNuevo = {
-  nombre: "El Nuevo", 
+  nombre: "El Nuevo",
   edad: 24,
   tomaBatidos: true,
   trabajoHoy: null,
@@ -143,3 +143,28 @@ let comparacionLogicaConI = 100 > 0 && 0 > 4;
 
 // PARA QUE SEA TRUE ALGO TIENE QUE SER TRUE
 let comparacionConOr = 5 != 5 || 10 > 4;
+
+//CONDICIONALES: if = SI // else if = SINO, SI // else = SINO
+
+// IF me pisa un auto voy a ir al hospital, ELSE IF me pisa un camion voy a
+//quedar hecho bosta, ELSE buenisimo no me pasa nada!!!
+
+let mePisa = prompt();
+
+if (mePisa === "auto") {
+  console.log("Voy a ir al hospital");
+} else if (mePisa === "camion") {
+  console.log("Me hicieron bosta");
+} else if (mePisa === "motoneta") {
+  console.log("Bueno tampoco duele tanto jejeje");
+} else if (
+  mePisa === "lancha" ||
+  mePisa === "helicoptero" ||
+  mePisa === "avion"
+) {
+  console.log("Como diablos paso eso?");
+} else if (mePisa === "vaca" || mePisa === "vaquita") {
+  console.log("Sabíamos que este terrorifico día llegaría");
+} else {
+  console.log("Bueno creo que voy a estar bien");
+}
