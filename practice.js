@@ -185,3 +185,13 @@ if (edad >= 18 && edad <= 39) {
   console.log("Ingresá una edad válida")
 }
 //Sunday Wordpress, overdue task
+let age = prompt ("Please tell US your Age :)")
+if(age >= 18 <= 45){
+  console.log (`Your current age is ${age}, congrats! access conceded` )
+} else if (age < 18 && age >= 0){
+  console.log("We sorry, you are too young")
+} else if (age > 45 && age < 120){
+  console.log("Access denied")
+} else {
+  console.log ("Invalid patrons")
+}
