@@ -189,4 +189,6 @@ if (edad >= 18 && edad <= 39) {
 let age = prompt ("Please tell US your Age :)")
 if(age >= 18 <= 45){
   console.log (`Your current age is ${age}, congrats! access conceded` )
+} else if (age < 18 && age >= 0){
+  console.log("We sorry, you are too young")
 }
