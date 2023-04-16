@@ -149,7 +149,7 @@ let comparacionConOr = 5 != 5 || 10 > 4;
 // IF me pisa un auto voy a ir al hospital, ELSE IF me pisa un camion voy a
 //quedar hecho bosta, ELSE buenisimo no me pasa nada!!!
 
-let mePisa = prompt();
+let mePisa = "auto";
 
 if (mePisa === "auto") {
   console.log("Voy a ir al hospital");
@@ -167,4 +167,31 @@ if (mePisa === "auto") {
   console.log("Sabíamos que este terrorifico día llegaría");
 } else {
   console.log("Bueno creo que voy a estar bien");
+}
+
+//Si tengo 18 años o más puedo entrar al recital de YSY A a que me diga que me ayude solo
+//Si tengo menos de 18 años no puedo entrar y tengo que esperar para ayudarme
+//Si tengo +40 años no puedo entrar porque no pueden ayudarme a volar
+
+let edad = prompt("Ingresa tu edad a ver si podés volar ✈️");
+
+if (edad >= 18 && edad <= 39) {
+  console.log("Entrán al recital pero ayudense entre ustedes ✈️");
+} else if (edad < 18 && edad >= 0){
+  console.log("No puedes disfrutar la experiencia YSY A, eres muy chico YEYE")
+} else if (edad >= 40 && edad <= 120){
+  console.log("No puedes entrar porque no pueden ayudarme a volar yeyeye")
+} else {
+  console.log("Ingresá una edad válida")
+}
+//Sunday Wordpress, overdue task
+let age = prompt ("Please tell US your Age :)")
+if(age >= 18 <= 45){
+  console.log (`Your current age is ${age}, congrats! access conceded` )
+} else if (age < 18 && age >= 0){
+  console.log("We sorry, you are too young")
+} else if (age > 45 && age < 120){
+  console.log("Access denied")
+} else {
+  console.log ("Invalid patrons")
 }
