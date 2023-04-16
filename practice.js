@@ -185,3 +185,5 @@ if (edad >= 18 && edad <= 39) {
   console.log("Ingresá una edad válida")
 }
 //Sunday Wordpress, overdue task
+
+let age = prompt ("Please tell US your Age :)")
