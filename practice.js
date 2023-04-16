@@ -187,3 +187,6 @@ if (edad >= 18 && edad <= 39) {
 //Sunday Wordpress, overdue task
 
 let age = prompt ("Please tell US your Age :)")
+if(age >= 18 <= 45){
+  console.log (`Your current age is ${age}, congrats! access conceded` )
+}
