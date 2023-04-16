@@ -193,4 +193,6 @@ if(age >= 18 <= 45){
   console.log("We sorry, you are too young")
 } else if (age > 45 && age < 120){
   console.log("Access denied")
+} else {
+  console.log ("Invalid patrons")
 }
