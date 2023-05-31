@@ -15,5 +15,22 @@ console.log(fibonacci(7));
 //Modifying const properties because is COMPLEX DATA TYPE
 const fruits = ["apple","pineapple","orange"]
 fruits.push("watermelon")
+fruits[0]="mango" 
 console.log(fruits)
 //End Class 4
+
+const humano = {
+    name: "Matias",
+    age: 8,
+    married: true,
+}
+console.log(humano)
+humano.happiness = true
+
+
+const alberto = {
+    profession: "verdulero",
+}
+
+alberto.profession = "carnicero"
+console.log(alberto)
