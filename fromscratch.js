@@ -9,5 +9,11 @@ function fibonacci(number) {
   }
   return secuenceFib[number];
 }
-
 console.log(fibonacci(7));
+
+
+
+
+const fruits = ["apple","pineapple","orange"]
+fruits.push("watermelon")
+console.log(fruits)
