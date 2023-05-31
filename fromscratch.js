@@ -20,25 +20,31 @@ console.log(fruits)
 /*End Class 4*/
 
 
-
+/* .LENGTH 🉐*/
 /* Property for counting characters */
 let pepito = "caramelitotetete"
 console.log(pepito.length) 
 
+/* .INCLUDES🉐*/
 /* Method for asking if something has something inside*/
 console.log(pepito.includes("caramel"))
 
+/* .CONCAT🉐*/
 /* Method for adding something or pasting something*/
 let saborDelCaramelito = " de Maracuya"
 console.log(pepito.concat(saborDelCaramelito))
 
+/* .UPPERCASE .LOWERCASE🉐*/
 /* Method for transforming font to Mayus or Minus*/
 let lowerLetter = "iM WhiSpeRinG"
 console.log(lowerLetter.toLowerCase()) 
 let upperLetter = "im scrEaMing"
 console.log(upperLetter.toUpperCase()) 
 
+/* .SLICE🉐*/
 /*Method used to extract a portion of a string and return a
  new string without modifying the original one*/
 let message = "Hello chavaletes how you doing";
-console.log(message.slice(0,12));
+console.log(message.slice(1,12));
+
+/*End Class 5*/
