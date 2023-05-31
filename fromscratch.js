@@ -12,8 +12,7 @@ function fibonacci(number) {
 console.log(fibonacci(7));
 
 
-
-
+//Modifying const properties because is COMPLEX DATA TYPE
 const fruits = ["apple","pineapple","orange"]
 fruits.push("watermelon")
 console.log(fruits)
