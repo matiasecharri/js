@@ -47,4 +47,33 @@ console.log(upperLetter.toUpperCase())
 let message = "Hello chavaletes how you doing";
 console.log(message.slice(1,12));
 
+/* .INDEXOF🉐*/
+/* Find position of first character of a word in a String Chain*/
+let chainOfWords = "Hi, this is a test, circus";
+console.log(chainOfWords.indexOf("circus"))
+
+/* .ENDSWITH .STARTSWITH🉐*/
+/* Verify if a String Chain starts or ends with a specific chain*/
+let testingMessage = "Today is Wednesday 31"
+console.log(testingMessage.endsWith("31"))
+console.log(testingMessage.startsWith("To"))
+
+/* .REPLACE🉐*/
+/* Search a STRING CHAIN and REPLACE IT with a NEW ONE */
+let popis = "Hello, my big friend!";
+console.log(popis.replace("my big friend!", "doctor curita"));
+
+
+/* .TRIM🉐*/
+/* Method for removing whitespace characters from both ends of a string*/
+let trimedMessage = "   I have whitespace   "
+console.log(trimedMessage.trim())
+
+
+/* .SPLIT🉐*/
+/*Method for spliting a string into an array of substrings 
+based on a specified separator */
+let imGoingToSplitThis = "Are X you X winning X son?";
+console.log(imGoingToSplitThis.split("X"))
+
 /*End Class 5*/
