@@ -1,6 +1,6 @@
-//Fibonacci
-//First two numbers are 0 and 1 then the others are calculated adding the previous ones
-//Ejemeplo 3+5 = 8, 5+8 = 13, 8+13= 21
+/*Fibonacci
+First two numbers are 0 and 1 then the others are calculated adding the previous ones
+Ejemeplo 3+5 = 8, 5+8 = 13, 8+13= 21 */
 
 function fibonacci(number) {
   const secuenceFib = [0, 1];
