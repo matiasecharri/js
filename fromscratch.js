@@ -19,18 +19,15 @@ fruits[0]="mango"
 console.log(fruits)
 //End Class 4
 
-const humano = {
-    name: "Matias",
-    age: 8,
-    married: true,
-}
-console.log(humano)
-humano.happiness = true
 
 
-const alberto = {
-    profession: "verdulero",
-}
+/* Property for counting characters */
+let pepito = "caramelito"
+console.log(pepito.length) 
 
-alberto.profession = "carnicero"
-console.log(alberto)
+/* Property for asking if something has something inside*/
+console.log(pepito.includes("caramel"))
+
+/* Property for adding something or pasting something*/
+let saborDelCaramelito = " de Maracuya"
+console.log(pepito.concat(saborDelCaramelito))
