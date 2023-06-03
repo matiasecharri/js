@@ -1,6 +1,4 @@
-/*Fibonacci
-First two numbers are 0 and 1 then the others are calculated adding the previous ones
-Ejemeplo 3+5 = 8, 5+8 = 13, 8+13= 21 */
+/* 🫐🫧☂️💜⚛️ BUTTON PLAYER */
 function buttonPlayer() {
   let container = document.getElementById("main1");
   let playButton = document.getElementById("myAudio");
@@ -8,27 +6,26 @@ function buttonPlayer() {
 
   playButton.addEventListener("play", (x) => {
     if (imageCounter === 1) {
-      container.innerHTML = `<div data-aos="fade-up" data-aos-duration="800""><img src="/assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      container.innerHTML = `<div data-aos="fade-up" data-aos-duration="800""><img src="assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
       document.title = "visualizer_01";
       imageCounter = 2;
     } else if (imageCounter === 2) {
-      container.innerHTML = `<img src="/assets/v2.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
-      container.innerHTML = `<div><img src="/assets/whitenoise2.gif" class="fatty" alt="" /></div>`;
+      container.innerHTML = `<div><img src="assets/whitenoise2.gif" class="fatty" alt="" /></div>`;
       document.title = "the_violet_color";
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<div><img src="/assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      container.innerHTML = `<div><img src="assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
       document.title = "visualizer_03";
 
       imageCounter = 5;
     } else if (imageCounter === 5) {
-      container.innerHTML = `<img src="/assets/v2.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
       document.title = "visualizer_04";
-
       imageCounter = 4;
     }
   });
@@ -42,9 +39,24 @@ function buttonPlayer() {
     document.title = "now_paused";
   });
 }
-
 buttonPlayer();
 
+/* 🫐🫧☂️💜⚛️ TITLE CHANGER */
+function comeBackTitleChanger() {
+  let previousTitle = document.title;
+  window.addEventListener("blur", () => {
+    previousTitle = document.title;
+    document.title = "is_there_someone_else?";
+  });
+  window.addEventListener("focus", () => {
+    document.title = previousTitle;
+  });
+}
+comeBackTitleChanger();
+
+/*Fibonacci
+First two numbers are 0 and 1 then the others are calculated adding the previous ones
+Ejemeplo 3+5 = 8, 5+8 = 13, 8+13= 21 */
 function fibonacci(number) {
   const secuenceFib = [0, 1];
   for (let i = 2; i <= number; i++) {
