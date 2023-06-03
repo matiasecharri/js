@@ -75,26 +75,9 @@ main img {
   }
 }
 
-.fatty{
+.fatty {
   width: 650px;
-  object-fit:cover;
-}
-.part1 {
-  height: 50%;
-  background-color: black;
-}
-
-.part1 img {
-  height: 100%;
-  width: 100%;
   object-fit: cover;
-}
-
-.part2 {
-  display: flex;
-  background-color: antiquewhite;
-  height: 50%;
-  flex-direction: column;
 }
 
 .loader {
@@ -132,10 +115,29 @@ main img {
   }
 }
 
-
-.megastyled{
+.megastyled {
   background-image: none;
   background-image: url(/assets/e.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.buttonContainer {
+  width: 100%;
+  height: 8vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttonContainer button {
+  margin-top: 20px;
+  background-color: rgb(249, 112, 32);
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+  font-size: 10px;
 }
