@@ -1,6 +1,39 @@
 /*Fibonacci
 First two numbers are 0 and 1 then the others are calculated adding the previous ones
 Ejemeplo 3+5 = 8, 5+8 = 13, 8+13= 21 */
+function buttonPlayer() {
+  let container = document.getElementById("main1");
+  let playButton = document.getElementById("myAudio");
+  let imageCounter = 1;
+
+  playButton.addEventListener("play", (x) => {
+    if (imageCounter === 1) {
+      container.innerHTML = `<div data-aos="fade-up" data-aos-duration="800""><img src="/assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      imageCounter = 2;
+    } else if (imageCounter === 2) {
+      container.innerHTML = `<img src="/assets/v2.gif" alt="" />`;
+      imageCounter = 3;
+    } else if (imageCounter === 3) {
+      container.innerHTML = `<div><img src="/assets/whitenoise2.gif" class="fatty" alt="" /></div>`;
+      imageCounter = 4;
+    } else if (imageCounter === 4) {
+      container.innerHTML = `<div><img src="/assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      imageCounter = 5;
+    } else if (imageCounter === 5) {
+      container.innerHTML = `<img src="/assets/v2.gif" alt="" />`;
+      imageCounter = 4;
+    }
+  });
+
+  playButton.addEventListener("pause", (x) => {
+    container.innerHTML = `
+      <p>play to re-connect</p>
+      <div class="loader"></div>
+    `;
+  });
+}
+
+buttonPlayer();
 
 function fibonacci(number) {
   const secuenceFib = [0, 1];
@@ -73,5 +106,3 @@ let imGoingToSplitThis = "Are X you X winning X son?";
 console.log(imGoingToSplitThis.split("X"));
 
 /*End Class 5*/
-
-
