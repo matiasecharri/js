@@ -75,11 +75,3 @@ console.log(imGoingToSplitThis.split("X"));
 /*End Class 5*/
 
 
-
-let carroMolon = "El Chiche"
-
-
-
-console.log(`Veo que te compraste un nuevo ${carroMolon}`)
-carroMolon = "la nave"
-console.log(`Veo que te compraste un nuevo ${carroMolon}`)
