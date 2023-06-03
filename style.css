@@ -5,13 +5,68 @@
 }
 
 main {
-  background-color: rgb(44, 43, 43);
+  background-color: rgb(249, 249, 249);
   height: 100vh;
   display: flex;
   justify-content: center;
-
+  flex-direction: column-reverse;
+  gap: 50px;
   align-items: center;
 }
+audio {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  background-color: rgba(75, 228, 228, 0);
+  
+}
+
+audio::-webkit-media-controls-panel {
+ /* Cambia el color de fondo */
+  border-radius: 0; /* Elimina el border-radius del fondo */
+}
+
+
+audio::-webkit-media-controls-panel {
+  background-color: #f9f9f9; /* Cambia el color de fondo */
+  color: #f9f9f9; /* Cambia el color del texto */
+  fill: #ffffff; /* Cambia el color de los iconos */
+  border-radius: 0px;
+}
+
+main img {
+  /* Estilos iniciales */
+  width: 120px;
+  height: 555px;
+  object-fit: cover;
+  border-radius: 360px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition-duration: 0.8s; /* Agregar una duración de transición por defecto */
+  transition-timing-function: ease-out; /* Agregar una función de temporización por defecto */
+  animation-name: hover-animation;
+  animation-duration: 3.2s; /* Duración total de la animación */
+  animation-iteration-count: infinite; /* Repetición infinita */
+  animation-direction: alternate; /* Alternar la dirección de la animación */
+}
+
+@keyframes hover-animation {
+  0% {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1) translateY(0); /* Escala y posición inicial */
+  }
+  50% {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: scale(1.05) translateY(-10px); /* Escala y posición durante la animación (hacia arriba) */
+  }
+  100% {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1) translateY(0); /* Escala y posición final (vuelve a la posición original) */
+  }
+}
+
+
 
 .card {
   height: 700px;
@@ -27,9 +82,9 @@ main {
 }
 
 .part1 img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .part2 {
