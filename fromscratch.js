@@ -74,30 +74,12 @@ console.log(imGoingToSplitThis.split("X"));
 
 /*End Class 5*/
 
-let ingrediente1 = "Ha";
-let supermercadoChino = "Manteca";
-let frijolitos = "Sandia Con Caca"
-frijolitos = "Frijoles";
-frijolitos = "Panadero"
-let ingrediente8 = "Maracandinguana"
-ingrediente8 = "Medicacion Legal"
-let cantidad = 65;
-// let interaccionConUsuario = prompt("Ingresa un puto ingrediente");
 
 
-// if (interaccionConUsuario.length > 5) {
-//   console.log(`El ingrediente es ${interaccionConUsuario}`);
-// } else {
-//   console.log(
-//     `El ingrediente es ${ingrediente8} porque el usuario es un pelotudo`
-//   );
-// }
+let carroMolon = "El Chiche"
 
 
-const Humanoide = {
-  pelo: "Negro",
-  colorDeOjos: "Azul",
-}
 
-Humanoide.pelo = "Celeste Alternativo"
-console.log(Humanoide)
+console.log(`Veo que te compraste un nuevo ${carroMolon}`)
+carroMolon = "la nave"
+console.log(`Veo que te compraste un nuevo ${carroMolon}`)
