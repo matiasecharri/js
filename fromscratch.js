@@ -14,9 +14,10 @@ function buttonPlayer() {
       container.innerHTML = `<img src="/assets/v2.gif" alt="" />`;
       imageCounter = 3;
     } else if (imageCounter === 3) {
-      container.innerHTML = `<div><img src="/assets/whitenoise2.gif" class="fatty" alt="" /></div>`;
+           container.innerHTML = `<div><img src="/assets/whitenoise2.gif" class="fatty" alt="" /></div>`;
       imageCounter = 4;
     } else if (imageCounter === 4) {
+      container.classList.add("megastyled");
       container.innerHTML = `<div><img src="/assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
       imageCounter = 5;
     } else if (imageCounter === 5) {
@@ -26,6 +27,7 @@ function buttonPlayer() {
   });
 
   playButton.addEventListener("pause", (x) => {
+    container.classList.remove("megastyled");
     container.innerHTML = `
       <p>play to re-connect</p>
       <div class="loader"></div>
