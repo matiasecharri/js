@@ -19,12 +19,12 @@ function buttonPlayer() {
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<div><img src="assets/v7.gif" alt="" /></div>`;
+      container.innerHTML = `<div><img src="assets/v8.gif" alt="" /></div>`;
       document.title = "visualizer_03";
 
       imageCounter = 5;
     } else if (imageCounter === 5) {
-      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v9.gif" "alt="" />`;
       document.title = "visualizer_04";
       imageCounter = 4;
     }
