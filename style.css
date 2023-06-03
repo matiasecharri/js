@@ -129,15 +129,24 @@ main img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .buttonContainer button {
   margin-top: 20px;
-  background-color: rgb(249, 112, 32);
+  background-color: rgba(249, 112, 32, 0);
   height: 40px;
   width: 80px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   font-size: 10px;
+  animation: ease-in-out;
 }
+
+.buttonContainer button:hover {
+  background-color: rgba(48, 28, 16, 0.048);
+  color: rgba(184, 9, 146, 0.699);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+
