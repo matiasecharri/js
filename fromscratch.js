@@ -6,7 +6,7 @@ function buttonPlayer() {
 
   playButton.addEventListener("play", (x) => {
     if (imageCounter === 1) {
-      container.innerHTML = `<div data-aos="fade-up" data-aos-duration="800""><img src="assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      container.innerHTML = `<div data-aos="fade-up" data-aos-duration="800""><img src="assets/v1.gif" alt="" /></div>`;
       document.title = "visualizer_01";
       imageCounter = 2;
     } else if (imageCounter === 2) {
@@ -14,12 +14,12 @@ function buttonPlayer() {
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
-      container.innerHTML = `<div><img src="assets/whitenoise2.gif" class="fatty" alt="" /></div>`;
+      container.innerHTML = `<div><img src="assets/v3.gif" class="fatty" alt="" /></div>`;
       document.title = "the_violet_color";
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<div><img src="assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      container.innerHTML = `<div><img src="assets/v7.gif" alt="" /></div>`;
       document.title = "visualizer_03";
 
       imageCounter = 5;
