@@ -54,6 +54,23 @@ function comeBackTitleChanger() {
 }
 comeBackTitleChanger();
 
+function nightMode() {
+  let container = document.getElementById("main1");
+  let buttonNight = document.getElementById("daynightmode");
+  let nightOrDay = false;
+
+  buttonNight.addEventListener("click", (x) => {
+    if (nightOrDay === false) {
+      container.classList.add("megastyled");
+      nightOrDay = true;
+    } else if (nightOrDay === true) {
+      container.classList.remove("megastyled");
+      nightOrDay = false;
+    }
+  });
+}
+nightMode();
+
 /*Fibonacci
 First two numbers are 0 and 1 then the others are calculated adding the previous ones
 Ejemeplo 3+5 = 8, 5+8 = 13, 8+13= 21 */
