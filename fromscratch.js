@@ -1,45 +1,58 @@
+//Podriamos hacer que el fondo cambie segun el horario, arreglar el loader.
 /* 🫐🫧☂️💜⚛️ BUTTON PLAYER */
 function buttonPlayer() {
   let container = document.getElementById("main1");
   let playButton = document.getElementById("myAudio");
   let imageCounter = 1;
-
+  container.innerHTML = `<p id="playToReco" class="colored">play to re-connect</p>
+  <div class="loader"></div> `;
   playButton.addEventListener("play", (x) => {
     if (imageCounter === 1) {
-      container.innerHTML = `<div data-aos="fade-up" data-aos-duration="800""><img src="assets/v1.gif" alt="" /></div>`;
+      container.classList.add("megastyled");
+      container.innerHTML = `<img data-aos="fade-up" data-aos-duration="400" src="assets/v1.gif" alt="" />`;
       document.title = "visualizer_01";
       imageCounter = 2;
     } else if (imageCounter === 2) {
+      container.classList.add("megastyled");
       container.innerHTML = `<img src="assets/v5.gif" alt="" />`;
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
-      container.innerHTML = `<div><img src="assets/v3.gif" class="fatty" alt="" /></div>`;
+      container.classList.add("megastyled");
+      container.innerHTML = `<img src="assets/v3.gif" alt="" />`;
       document.title = "the_violet_color";
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<div><img src="assets/v4.gif" alt="" /></div>`;
+      container.innerHTML = `<img src="assets/v4.gif" alt="" />`;
       document.title = "visualizer_03";
 
       imageCounter = 5;
     } else if (imageCounter === 5) {
+      container.classList.add("megastyled");
       container.innerHTML = `<img src="assets/v7.gif" "alt="" />`;
       document.title = "visualizer_04";
-      imageCounter = 4;
+      imageCounter = 6;
+    } else if (imageCounter === 6) {
+      container.classList.add("megastyled");
+      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      document.title = "visualizer_01";
+      imageCounter = 2;
     }
   });
 
   playButton.addEventListener("pause", (x) => {
     container.classList.remove("megastyled");
     container.innerHTML = `
-      <p>play to re-connect</p>
-      <div class="loader"></div>
+    <p id="playToReco" class="colored">play to re-connect</p>
+    <div class="loader"></div>
     `;
     document.title = "now_paused";
   });
 }
 buttonPlayer();
+
+/* --------------------------------------------------------------------------------------- */
 
 /* 🫐🫧☂️💜⚛️ TITLE CHANGER */
 function comeBackTitleChanger() {
@@ -54,6 +67,8 @@ function comeBackTitleChanger() {
 }
 comeBackTitleChanger();
 
+/* --------------------------------------------------------------------------------------- */
+
 /* 🫐🫧☂️💜⚛️ NIGHT MODE*/
 function nightMode() {
   let container = document.getElementById("main1");
@@ -61,8 +76,6 @@ function nightMode() {
   let previousB = document.getElementById("previousButton");
   let playB = document.getElementById("playButton");
   let nextB = document.getElementById("nextButton");
-  let playToR = document.getElementById("playToReco");
-  let loader5 = document.getElementById("loader55");
   let nightOrDay = false;
 
   buttonNight.addEventListener("click", (x) => {
@@ -71,74 +84,20 @@ function nightMode() {
       previousB.classList.add("lighter");
       playB.classList.add("lighter");
       nextB.classList.add("lighter");
-      loader5.classList.add("lighterLoader");
-      playToR.classList.add("lighter");
+
       nightOrDay = true;
     } else if (nightOrDay === true) {
       container.classList.remove("batmanMode");
       previousB.classList.remove("lighter");
       playB.classList.remove("lighter");
       nextB.classList.remove("lighter");
-      loader5.classList.remove("lighterLoader");
-      playToR.classList.remove("lighter");
       nightOrDay = false;
     }
   });
 }
 nightMode();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* --------------------------------------------------------------------------------------- */
 
 /*Fibonacci
 First two numbers are 0 and 1 then the others are calculated adding the previous ones
