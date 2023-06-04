@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="./assets/b73faab58bd29262dcefd7d8b83f71ce.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/b73faab58bd29262dcefd7d8b83f71ce.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>visualizer_00</title>
   </head>
@@ -18,23 +22,18 @@
 
     <div class="buttonContainer">
       <!-- <button >< PREVIOUS</button>  <button>PLAY/PAUSE</button> <button>NEXT ></button> -->
-      <button class="ui-btn">
-        <span>
-         < PREVIOUS
-        </span>
-      </button><button class="ui-btn">
-        <span id="daynightmode">
-          PLAY/PAUSE
-        </span>
-      </button><button class="ui-btn">
-        <span>
-          NEXT >
-        </span>
+      <button class="ui-btn" id="previousButton">
+        <span> < PREVIOUS </span></button
+      ><button class="ui-btn" id="playButton">
+        <span id="daynightmode"> DAY/NIGHT </span></button
+      ><button class="ui-btn" id="nextButton">
+        <span> NEXT > </span>
       </button>
     </div>
     <main id="main1">
-      <p>play to re-connect</p>
-      <div class="loader"></div>
+      <p id="playToReco">play to re-connect</p>
+      <div class="loader" id="loader55"></div>
+     
     </main>
 
     <!-- <script src="./api2.js"></script>

@@ -10,7 +10,7 @@ function buttonPlayer() {
       document.title = "visualizer_01";
       imageCounter = 2;
     } else if (imageCounter === 2) {
-      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v5.gif" alt="" />`;
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
@@ -19,12 +19,12 @@ function buttonPlayer() {
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<div><img src="assets/v8.gif" alt="" /></div>`;
+      container.innerHTML = `<div><img src="assets/v4.gif" alt="" /></div>`;
       document.title = "visualizer_03";
 
       imageCounter = 5;
     } else if (imageCounter === 5) {
-      container.innerHTML = `<img src="assets/v9.gif" "alt="" />`;
+      container.innerHTML = `<img src="assets/v7.gif" "alt="" />`;
       document.title = "visualizer_04";
       imageCounter = 4;
     }
@@ -54,22 +54,91 @@ function comeBackTitleChanger() {
 }
 comeBackTitleChanger();
 
+/* 🫐🫧☂️💜⚛️ NIGHT MODE*/
 function nightMode() {
   let container = document.getElementById("main1");
   let buttonNight = document.getElementById("daynightmode");
+  let previousB = document.getElementById("previousButton");
+  let playB = document.getElementById("playButton");
+  let nextB = document.getElementById("nextButton");
+  let playToR = document.getElementById("playToReco");
+  let loader5 = document.getElementById("loader55");
   let nightOrDay = false;
 
   buttonNight.addEventListener("click", (x) => {
     if (nightOrDay === false) {
-      container.classList.add("megastyled");
+      container.classList.add("batmanMode");
+      previousB.classList.add("lighter");
+      playB.classList.add("lighter");
+      nextB.classList.add("lighter");
+      loader5.classList.add("lighterLoader");
+      playToR.classList.add("lighter");
       nightOrDay = true;
     } else if (nightOrDay === true) {
-      container.classList.remove("megastyled");
+      container.classList.remove("batmanMode");
+      previousB.classList.remove("lighter");
+      playB.classList.remove("lighter");
+      nextB.classList.remove("lighter");
+      loader5.classList.remove("lighterLoader");
+      playToR.classList.remove("lighter");
       nightOrDay = false;
     }
   });
 }
 nightMode();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Fibonacci
 First two numbers are 0 and 1 then the others are calculated adding the previous ones
