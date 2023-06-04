@@ -35,7 +35,7 @@ function buttonPlayer() {
       imageCounter = 6;
     } else if (imageCounter === 6) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v10.webp" alt="" />`;
       document.title = "visualizer_01";
       imageCounter = 2;
     }
