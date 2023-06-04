@@ -1,45 +1,58 @@
+//Podriamos hacer que el fondo cambie segun el horario, arreglar el loader.
 /* 🫐🫧☂️💜⚛️ BUTTON PLAYER */
 function buttonPlayer() {
   let container = document.getElementById("main1");
   let playButton = document.getElementById("myAudio");
   let imageCounter = 1;
-
+  container.innerHTML = `<p id="playToReco" class="colored">play to re-connect</p>
+  <div class="loader"></div> `;
   playButton.addEventListener("play", (x) => {
     if (imageCounter === 1) {
-      container.innerHTML = `<div data-aos="fade-up" data-aos-duration="800""><img src="assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      container.classList.add("megastyled");
+      container.innerHTML = `<img data-aos="fade-up" data-aos-duration="400" src="assets/v1.gif" alt="" />`;
       document.title = "visualizer_01";
       imageCounter = 2;
     } else if (imageCounter === 2) {
-      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      container.classList.add("megastyled");
+      container.innerHTML = `<img src="assets/v5.gif" alt="" />`;
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
-      container.innerHTML = `<div><img src="assets/whitenoise2.gif" class="fatty" alt="" /></div>`;
+      container.classList.add("megastyled");
+      container.innerHTML = `<img src="assets/v3.gif" alt="" />`;
       document.title = "the_violet_color";
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<div><img src="assets/ff45945353cca4660f482edf00a036f3.gif" alt="" /></div>`;
+      container.innerHTML = `<img src="assets/v4.gif" alt="" />`;
       document.title = "visualizer_03";
 
       imageCounter = 5;
     } else if (imageCounter === 5) {
-      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      container.classList.add("megastyled");
+      container.innerHTML = `<img src="assets/v7.gif" "alt="" />`;
       document.title = "visualizer_04";
-      imageCounter = 4;
+      imageCounter = 6;
+    } else if (imageCounter === 6) {
+      container.classList.add("megastyled");
+      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      document.title = "visualizer_01";
+      imageCounter = 2;
     }
   });
 
   playButton.addEventListener("pause", (x) => {
     container.classList.remove("megastyled");
     container.innerHTML = `
-      <p>play to re-connect</p>
-      <div class="loader"></div>
+    <p id="playToReco" class="colored">play to re-connect</p>
+    <div class="loader"></div>
     `;
     document.title = "now_paused";
   });
 }
 buttonPlayer();
+
+/* --------------------------------------------------------------------------------------- */
 
 /* 🫐🫧☂️💜⚛️ TITLE CHANGER */
 function comeBackTitleChanger() {
@@ -53,6 +66,60 @@ function comeBackTitleChanger() {
   });
 }
 comeBackTitleChanger();
+
+/* --------------------------------------------------------------------------------------- */
+
+/* 🫐🫧☂️💜⚛️ NIGHT/DAY MODE*/
+function nightMode() {
+  let container = document.getElementById("main1");
+  let buttonNight = document.getElementById("daynightmode");
+  let previousB = document.getElementById("previousButton");
+  let playB = document.getElementById("playButton");
+  let nextB = document.getElementById("nextButton");
+  let nightOrDay = false;
+
+  //Get the user actual HOUR
+  const currentHour = new Date().getHours();
+  //Set when is night and when is day
+  const isNightTime = currentHour >= 19 || currentHour < 6;
+
+  //Function to Apply the Dark Mode
+  function enableDarkMode() {
+    container.classList.add("batmanMode");
+    previousB.classList.add("lighter");
+    playB.classList.add("lighter");
+    nextB.classList.add("lighter");
+    nightOrDay = true;
+  }
+
+  //Function to Apply the Light Mode
+  function enableLightMode() {
+    container.classList.remove("batmanMode");
+    previousB.classList.remove("lighter");
+    playB.classList.remove("lighter");
+    nextB.classList.remove("lighter");
+    nightOrDay = false;
+  }
+
+  //Activating Dark or Light mode checking the user HOUR
+  if (isNightTime) {
+    enableDarkMode();
+  } else {
+    enableLightMode();
+  }
+
+  // Alternar entre los temas al hacer clic en el botón
+  buttonNight.addEventListener("click", () => {
+    if (nightOrDay) {
+      enableLightMode();
+    } else {
+      enableDarkMode();
+    }
+  });
+}
+nightMode();
+
+/* --------------------------------------------------------------------------------------- */
 
 /*Fibonacci
 First two numbers are 0 and 1 then the others are calculated adding the previous ones

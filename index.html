@@ -5,27 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/b73faab58bd29262dcefd7d8b83f71ce.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>visualizer_00</title>
   </head>
   <body>
     <audio
       id="myAudio"
-      src="/Tory Lanez - The Color Violet [Official Audio].mp3"
+      src="/assets/songs/the_violet_color_tory_lanes.mp3"
       controls
     ></audio>
 
-    <!-- <div class="buttonContainer"><button>PREVIOUS</button> <button>NEXT</button></div> -->
-    <main id="main1">
-      <p>play to re-connect</p>
-      <div class="loader"></div>
-    </main>
-
-    <!-- <script src="./api2.js"></script>
-    <script src="./api.js"></script>
-    <script src="./main.js"></script> -->
-    <!-- <script src="./practice.js"></script> -->
+    <div class="buttonContainer">
+        <button class="ui-btn" id="previousButton">
+        <span> < PREVIOUS </span></button
+      ><button class="ui-btn" id="playButton">
+        <span id="daynightmode"> DAY/NIGHT </span>
+      </button>
+      <button class="ui-btn" id="nextButton">
+        <span> NEXT > </span>
+      </button>
+    </div>
+    <main id="main1"></main>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
