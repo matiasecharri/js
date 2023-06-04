@@ -123,8 +123,6 @@ main img {
 }
 
 .batmanMode {
-  background-image: none;
-  background-color: #d9d3d3;
   background-image: url(./assets/cblack.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -305,6 +303,13 @@ main img {
   color: #868686 !important;
 }
 
+@media only screen and (max-width: 834px) {
+  .batmanMode {
+    background-image: url(./assets/cblack.jpg);
+    background-position: 28%;
+  }
+}
+
 @media only screen and (max-height: 750px) {
   main img {
     /* Estilos iniciales */
@@ -313,8 +318,12 @@ main img {
     height: 65% !important;
     margin-top: 15px !important;
   }
-}
 
+  .batmanMode {
+    background-image: url(./assets/cblack.jpg);
+    background-position: 18%;
+  }
+}
 
 @media only screen and (max-height: 450px) {
   main img {
@@ -323,10 +332,8 @@ main img {
     object-fit: cover !important;
     height: 55% !important;
     margin-bottom: 10px;
-  
   }
 }
-
 
 @media only screen and (max-height: 150px) {
   main img {
@@ -335,6 +342,5 @@ main img {
     object-fit: cover !important;
     height: 5% !important;
     margin-bottom: 10px;
-  
   }
 }
