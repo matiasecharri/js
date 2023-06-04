@@ -69,7 +69,7 @@ comeBackTitleChanger();
 
 /* --------------------------------------------------------------------------------------- */
 
-/* 🫐🫧☂️💜⚛️ NIGHT MODE*/
+/* 🫐🫧☂️💜⚛️ NIGHT/DAY MODE*/
 function nightMode() {
   let container = document.getElementById("main1");
   let buttonNight = document.getElementById("daynightmode");
@@ -78,20 +78,42 @@ function nightMode() {
   let nextB = document.getElementById("nextButton");
   let nightOrDay = false;
 
-  buttonNight.addEventListener("click", (x) => {
-    if (nightOrDay === false) {
-      container.classList.add("batmanMode");
-      previousB.classList.add("lighter");
-      playB.classList.add("lighter");
-      nextB.classList.add("lighter");
+  //Get the user actual HOUR
+  const currentHour = new Date().getHours();
+  //Set when is night and when is day
+  const isNightTime = currentHour >= 19 || currentHour < 6;
 
-      nightOrDay = true;
-    } else if (nightOrDay === true) {
-      container.classList.remove("batmanMode");
-      previousB.classList.remove("lighter");
-      playB.classList.remove("lighter");
-      nextB.classList.remove("lighter");
-      nightOrDay = false;
+  //Function to Apply the Dark Mode
+  function enableDarkMode() {
+    container.classList.add("batmanMode");
+    previousB.classList.add("lighter");
+    playB.classList.add("lighter");
+    nextB.classList.add("lighter");
+    nightOrDay = true;
+  }
+
+  //Function to Apply the Light Mode
+  function enableLightMode() {
+    container.classList.remove("batmanMode");
+    previousB.classList.remove("lighter");
+    playB.classList.remove("lighter");
+    nextB.classList.remove("lighter");
+    nightOrDay = false;
+  }
+
+  //Activating Dark or Light mode checking the user HOUR
+  if (isNightTime) {
+    enableDarkMode();
+  } else {
+    enableLightMode();
+  }
+
+  // Alternar entre los temas al hacer clic en el botón
+  buttonNight.addEventListener("click", () => {
+    if (nightOrDay) {
+      enableLightMode();
+    } else {
+      enableDarkMode();
     }
   });
 }
