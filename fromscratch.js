@@ -1,4 +1,4 @@
-//Podriamos hacer que el fondo cambie segun el horario, arreglar el loader.
+
 /* 🫐🫧☂️💜⚛️ BUTTON PLAYER */
 function buttonPlayer() {
   let container = document.getElementById("main1");
@@ -92,7 +92,6 @@ function nightDayMode() {
     nextB.classList.add("lighter");
     themeSwitcher = true;
   }
-
   //Function to Apply the Light Mode
   function enableLightMode() {
     container.classList.remove("batmanMode");
