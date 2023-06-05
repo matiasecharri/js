@@ -69,19 +69,20 @@ comeBackTitleChanger();
 
 /* --------------------------------------------------------------------------------------- */
 
-/* 🫐🫧☂️💜⚛️ NIGHT/DAY MODE*/
-function nightMode() {
+/* 🫐🫧☂️💜⚛️ NIGHT-DAY MODE*/
+function nightDayMode() {
   let container = document.getElementById("main1");
   let buttonNight = document.getElementById("daynightmode");
   let previousB = document.getElementById("previousButton");
   let playB = document.getElementById("playButton");
   let nextB = document.getElementById("nextButton");
-  let nightOrDay = false;
+  let themeSwitcher = false;
 
   //Get the user actual HOUR
-  const currentHour = new Date().getHours();
+  const currentHour = new Date().getHours()
+  
   //Set when is night and when is day
-  const isNightTime = currentHour >= 19 || currentHour < 6;
+  const isNightTime = currentHour >= 18 || currentHour < 6;
 
   //Function to Apply the Dark Mode
   function enableDarkMode() {
@@ -89,7 +90,7 @@ function nightMode() {
     previousB.classList.add("lighter");
     playB.classList.add("lighter");
     nextB.classList.add("lighter");
-    nightOrDay = true;
+    themeSwitcher = true;
   }
 
   //Function to Apply the Light Mode
@@ -98,7 +99,7 @@ function nightMode() {
     previousB.classList.remove("lighter");
     playB.classList.remove("lighter");
     nextB.classList.remove("lighter");
-    nightOrDay = false;
+    themeSwitcher = false;
   }
 
   //Activating Dark or Light mode checking the user HOUR
@@ -110,14 +111,14 @@ function nightMode() {
 
   // Alternar entre los temas al hacer clic en el botón
   buttonNight.addEventListener("click", () => {
-    if (nightOrDay) {
+    if (themeSwitcher) {
       enableLightMode();
     } else {
       enableDarkMode();
     }
   });
 }
-nightMode();
+nightDayMode();
 
 /* --------------------------------------------------------------------------------------- */
 
