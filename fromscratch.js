@@ -78,8 +78,8 @@ function nightDayMode() {
   let themeSwitcher = false;
 
   //Get the user actual HOUR
-  const currentHour = new Date().getHours()
-  
+  const currentHour = new Date().getHours();
+
   //Set when is night and when is day
   const isNightTime = currentHour >= 18 || currentHour < 6;
 
@@ -194,3 +194,18 @@ let imGoingToSplitThis = "Are X you X winning X son?";
 console.log(imGoingToSplitThis.split("X"));
 
 /*End Class 5*/
+
+//FUNCTION DECLARADA 🉐// HABILITA EL DESORDEN YA QUE SE PUEDE EJECUTAR EN CUALQUIER LADO
+function autoConRuedas() {
+  console.log("LALALALALAL");
+}
+
+//FUNCION EXPRESADA O ANONIMA 🉐// EVITA EL DESORDEN YA QUE OBLIGA A EJECUTAR DESPUES DE DECLARAR
+const autoSinRuedas = function () {
+  console.log("LELELELELEL");
+};
+
+//FUNCION ARROW 🉐// EVITA EL DESORDEN YA QUE OBLIGA A EJECUTAR DESPUES DE DECLARAR, THIS ALLOWED
+const autoEvolucionado = () => {
+  console.log("LOLOLOLOL");
+};
