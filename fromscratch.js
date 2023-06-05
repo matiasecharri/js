@@ -1,4 +1,3 @@
-
 /* 🫐🫧☂️💜⚛️ BUTTON PLAYER */
 function buttonPlayer() {
   let container = document.getElementById("main1");
