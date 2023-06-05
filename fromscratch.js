@@ -54,7 +54,7 @@ buttonPlayer();
 
 /* --------------------------------------------------------------------------------------- */
 
-/* 🫐🫧☂️💜⚛️ TITLE CHANGERs */
+/* 🫐🫧☂️💜⚛️ TITLE CHANGER */
 function comeBackTitleChanger() {
   let previousTitle = document.title;
   window.addEventListener("blur", () => {
