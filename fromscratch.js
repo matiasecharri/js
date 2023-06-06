@@ -1,4 +1,3 @@
-//Podriamos hacer que el fondo cambie segun el horario, arreglar el loader.
 /* 🫐🫧☂️💜⚛️ BUTTON PLAYER */
 function buttonPlayer() {
   let container = document.getElementById("main1");
@@ -35,7 +34,7 @@ function buttonPlayer() {
       imageCounter = 6;
     } else if (imageCounter === 6) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v2.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v10.webp" alt="" />`;
       document.title = "visualizer_01";
       imageCounter = 2;
     }
@@ -69,19 +68,20 @@ comeBackTitleChanger();
 
 /* --------------------------------------------------------------------------------------- */
 
-/* 🫐🫧☂️💜⚛️ NIGHT/DAY MODE*/
-function nightMode() {
+/* 🫐🫧☂️💜⚛️ NIGHT-DAY MODE*/
+function nightDayMode() {
   let container = document.getElementById("main1");
   let buttonNight = document.getElementById("daynightmode");
   let previousB = document.getElementById("previousButton");
   let playB = document.getElementById("playButton");
   let nextB = document.getElementById("nextButton");
-  let nightOrDay = false;
+  let themeSwitcher = false;
 
   //Get the user actual HOUR
   const currentHour = new Date().getHours();
+
   //Set when is night and when is day
-  const isNightTime = currentHour >= 19 || currentHour < 6;
+  const isNightTime = currentHour >= 18 || currentHour < 6;
 
   //Function to Apply the Dark Mode
   function enableDarkMode() {
@@ -89,16 +89,15 @@ function nightMode() {
     previousB.classList.add("lighter");
     playB.classList.add("lighter");
     nextB.classList.add("lighter");
-    nightOrDay = true;
+    themeSwitcher = true;
   }
-
   //Function to Apply the Light Mode
   function enableLightMode() {
     container.classList.remove("batmanMode");
     previousB.classList.remove("lighter");
     playB.classList.remove("lighter");
     nextB.classList.remove("lighter");
-    nightOrDay = false;
+    themeSwitcher = false;
   }
 
   //Activating Dark or Light mode checking the user HOUR
@@ -110,14 +109,14 @@ function nightMode() {
 
   // Alternar entre los temas al hacer clic en el botón
   buttonNight.addEventListener("click", () => {
-    if (nightOrDay) {
+    if (themeSwitcher) {
       enableLightMode();
     } else {
       enableDarkMode();
     }
   });
 }
-nightMode();
+nightDayMode();
 
 /* --------------------------------------------------------------------------------------- */
 
@@ -195,3 +194,46 @@ let imGoingToSplitThis = "Are X you X winning X son?";
 console.log(imGoingToSplitThis.split("X"));
 
 /*End Class 5*/
+
+/* .TOFIXED🉐*/
+/* Metodo para redondear un numero*/
+let b = 2.4546
+console.log(b.toFixed(2))
+
+/* .PARSEINT🉐*/
+/* Devuelve un entero y TRANSFORMA STRING a NUMBER*/
+let a = "2.4546"
+console.log(parseInt(a))
+
+/* .PARSEFLOAT()🉐*/
+/* Devuelve un numero flotante y TRANSFORMA STRING a NUMBER*/
+let d = "2.4546"
+console.log(parseFloat(d))
+
+/* .TOSTRING()🉐*/
+/* Transforma un numero a string*/
+let e = 85
+console.log(e.toString())
+
+/* .MATHRANDOM()🉐*/
+/* Genera un número aleatorio entre 0,1*/
+let x = Math.random();
+console.log(x)
+
+/*End Class 6*/
+
+
+//FUNCTION DECLARADA 🉐// HABILITA EL DESORDEN YA QUE SE PUEDE EJECUTAR EN CUALQUIER LADO
+function autoConRuedas() {
+  console.log("LALALALALAL");
+}
+
+//FUNCION EXPRESADA O ANONIMA 🉐// EVITA EL DESORDEN YA QUE OBLIGA A EJECUTAR DESPUES DE DECLARAR
+const autoSinRuedas = function () {
+  console.log("LELELELELEL");
+};
+
+//FUNCION ARROW 🉐// EVITA EL DESORDEN YA QUE OBLIGA A EJECUTAR DESPUES DE DECLARAR, THIS ALLOWED
+const autoEvolucionado = () => {
+  console.log("LOLOLOLOL");
+};
