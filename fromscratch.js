@@ -195,6 +195,34 @@ console.log(imGoingToSplitThis.split("X"));
 
 /*End Class 5*/
 
+/* .TOFIXED🉐*/
+/* Metodo para redondear un numero*/
+let b = 2.4546
+console.log(b.toFixed(2))
+
+/* .PARSEINT🉐*/
+/* Devuelve un entero y TRANSFORMA STRING a NUMBER*/
+let a = "2.4546"
+console.log(parseInt(a))
+
+/* .PARSEFLOAT()🉐*/
+/* Devuelve un numero flotante y TRANSFORMA STRING a NUMBER*/
+let d = "2.4546"
+console.log(parseFloat(d))
+
+/* .TOSTRING()🉐*/
+/* Transforma un numero a string*/
+let e = 85
+console.log(e.toString())
+
+/* .MATHRANDOM()🉐*/
+/* Genera un número aleatorio entre 0,1*/
+let x = Math.random();
+console.log(x)
+
+/*End Class 6*/
+
+
 //FUNCTION DECLARADA 🉐// HABILITA EL DESORDEN YA QUE SE PUEDE EJECUTAR EN CUALQUIER LADO
 function autoConRuedas() {
   console.log("LALALALALAL");
