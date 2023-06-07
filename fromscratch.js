@@ -237,16 +237,18 @@ const autoEvolucionado = () => {
   console.log("LOLOLOLOL");
 };
 
-//CREATING OBJECTS WITH A SIMPLE FUNCTION 🉐 // 
+//CREATING OBJECTS WITH A SIMPLE FUNCTION 🉐 //
 const objectCreator = (songName, songAuthor, songDate) => {
   let song = {
-    songName: songName,
-    songAuthor: songAuthor,
-    songDate: songDate,
+    songName,
+    songAuthor,
+    songDate,
   };
   return song;
 };
 
 const song01 = objectCreator("The Color Violet", "Tory Lanes", "2021");
 const song02 = objectCreator("Is There Someone Else?", "The Weeknd", "2022");
-console.log(song01, song02)
+
+song01.songName = "Is not the color violet we change it";
+console.log(song01, song02);
