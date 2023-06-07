@@ -263,7 +263,12 @@ const humanCreator = (nameOfTheHuman, age, hairColor, emotionalState) => {
   return humanFetus;
 };
 
-const dibellaWeasly = humanCreator("Dibellita", 22, "Light Brown", "Sad/Shinji");
+const dibellaWeasly = humanCreator(
+  "Dibellita",
+  22,
+  "Light Brown",
+  "Sad/Shinji"
+);
 const matiasPotter = humanCreator("Matias", 24, "Brown", "Neutral");
 const claudito = humanCreator("Claudio", null, "Black");
 const cochito = humanCreator("Cocho", null, "Black and White", "Lazy");
@@ -274,7 +279,6 @@ dibellaWeasly.palaState = false;
 dibellaWeasly.highestProperties = true;
 dibellaWeasly.personCode = 43043075;
 dibellaWeasly.nameOfTheHuman = dibellaWeasly.nameOfTheHuman.toLowerCase();
-dibellaWeasly.personCode = dibellaWeasly.personCode.toString()
+dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
 console.log(dibellaWeasly, matiasPotter, claudito, cochito);
-
