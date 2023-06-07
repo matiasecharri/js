@@ -283,25 +283,7 @@ dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
 console.log(dibellaWeasly, matiasPotter, claudito, cochito);
 
-function humanGenerator(nombre, apellido, edad, animo, dni, colorFav) {
-  let humanito = {
-    name: nombre,
-    surname: apellido,
-    age: edad,
-    mood: animo,
-    dni: dni,
-    favoriteColor: colorFav,
-  };
-  return humanito;
-}
 
-let gatito1 = humanGenerator(
-  "Milo",
-  "Milito",
-  2,
-  "esquizofrenico",
-  0800111,
-  "naranja"
-);
+const arrayDeCosas = ["Pato", 2, "Saludes chiques", null,["hola","chau",[3,4,5]]]
 
-console.log(gatito1);
+console.log(arrayDeCosas[4][2][2])
