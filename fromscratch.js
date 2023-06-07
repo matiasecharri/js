@@ -197,31 +197,30 @@ console.log(imGoingToSplitThis.split("X"));
 
 /* .TOFIXED🉐*/
 /* Metodo para redondear un numero*/
-let b = 2.4546
-console.log(b.toFixed(2))
+let b = 2.4546;
+console.log(b.toFixed(2));
 
 /* .PARSEINT🉐*/
 /* Devuelve un entero y TRANSFORMA STRING a NUMBER*/
-let a = "2.4546"
-console.log(parseInt(a))
+let a = "2.4546";
+console.log(parseInt(a));
 
 /* .PARSEFLOAT()🉐*/
 /* Devuelve un numero flotante y TRANSFORMA STRING a NUMBER*/
-let d = "2.4546"
-console.log(parseFloat(d))
+let d = "2.4546";
+console.log(parseFloat(d));
 
 /* .TOSTRING()🉐*/
 /* Transforma un numero a string*/
-let e = 85
-console.log(e.toString())
+let e = 85;
+console.log(e.toString());
 
 /* .MATHRANDOM()🉐*/
 /* Genera un número aleatorio entre 0,1*/
 let x = Math.random();
-console.log(x)
+console.log(x);
 
 /*End Class 6*/
-
 
 //FUNCTION DECLARADA 🉐// HABILITA EL DESORDEN YA QUE SE PUEDE EJECUTAR EN CUALQUIER LADO
 function autoConRuedas() {
@@ -237,3 +236,49 @@ const autoSinRuedas = function () {
 const autoEvolucionado = () => {
   console.log("LOLOLOLOL");
 };
+
+//CREATING OBJECTS WITH A SIMPLE FUNCTION 🉐 //
+const objectCreator = (songName, songAuthor, songDate) => {
+  let song = {
+    songName,
+    songAuthor,
+    songDate,
+  };
+  return song;
+};
+
+const song01 = objectCreator("The Color Violet", "Tory Lanes", "2021");
+const song02 = objectCreator("Is There Someone Else?", "The Weeknd", "2022");
+
+song01.songName = "Is not the color violet we change it";
+console.log(song01, song02);
+
+const humanCreator = (nameOfTheHuman, age, hairColor, emotionalState) => {
+  let humanFetus = {
+    nameOfTheHuman,
+    age,
+    hairColor,
+    emotionalState,
+  };
+  return humanFetus;
+};
+
+const dibellaWeasly = humanCreator(
+  "Dibellita",
+  22,
+  "Light Brown",
+  "Sad/Shinji"
+);
+const matiasPotter = humanCreator("Matias", 24, "Brown", "Neutral");
+const claudito = humanCreator("Claudio", null, "Black");
+const cochito = humanCreator("Cocho", null, "Black and White", "Lazy");
+
+dibellaWeasly.emotionalState = "Happy";
+dibellaWeasly.hairColor = "Light Brown, with black ends";
+dibellaWeasly.palaState = false;
+dibellaWeasly.highestProperties = true;
+dibellaWeasly.personCode = 43043075;
+dibellaWeasly.nameOfTheHuman = dibellaWeasly.nameOfTheHuman.toLowerCase();
+dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
+
+console.log(dibellaWeasly, matiasPotter, claudito, cochito);
