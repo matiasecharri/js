@@ -283,9 +283,14 @@ dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
 console.log(dibellaWeasly, matiasPotter, claudito, cochito);
 
-function sumandoAndo(numeroUno, numeroDos, numeroTres, numero4, numero5) {
-  console.log(numeroUno + numeroDos + numeroTres * numero4 - numero5);
+function elDni(nombre, apellido) {
+  let personaEntera = `${nombre} ${apellido}`;
+  return personaEntera
 }
 
-sumandoAndo(9, 10, 2, 8, 2);
-sumandoAndo(1, 4, 5, 3, 45);
+let persona1 = elDni("Dibella", "Weasly")
+let personas2 = elDni("Matias", "Potter")
+
+console.log(persona1)
+console.log(personas2)
+
