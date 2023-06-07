@@ -252,3 +252,22 @@ const song02 = objectCreator("Is There Someone Else?", "The Weeknd", "2022");
 
 song01.songName = "Is not the color violet we change it";
 console.log(song01, song02);
+
+const humanCreator = (nameOfTheHuman, age, hairColor, emotionalState) => {
+  let humanFetus = {
+    nameOfTheHuman,
+    age,
+    hairColor,
+    emotionalState,
+  };
+  return humanFetus;
+};
+
+const dibellaWeasly = humanCreator("Dibellita",22,"Light Brown","Sad/Shinji");
+const matiasPotter = humanCreator("Matias", 24, "Brown", "Neutral");
+const claudito = humanCreator("Claudio", null, "Black");
+const cochito = humanCreator("Cocho", null, "Black and White", "Lazy");
+dibellaWeasly.emotionalState = "Happy";
+dibellaWeasly.hairColor = "Light Brown, with black ends";
+dibellaWeasly.palaState = false;
+console.log(dibellaWeasly, matiasPotter, claudito, cochito);
