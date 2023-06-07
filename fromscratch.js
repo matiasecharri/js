@@ -238,7 +238,7 @@ const autoEvolucionado = () => {
 };
 
 //CREATING OBJECTS WITH A SIMPLE FUNCTION 🉐 // 
-const theSongPlaying = (songName, songAuthor, songDate) => {
+const objectCreator = (songName, songAuthor, songDate) => {
   let song = {
     songName: songName,
     songAuthor: songAuthor,
@@ -247,6 +247,6 @@ const theSongPlaying = (songName, songAuthor, songDate) => {
   return song;
 };
 
-const song01 = theSongPlaying("The Color Violet", "Tory Lanes", "2021");
-const song02 = theSongPlaying("Is There Someone Else?", "The Weeknd", "2022");
+const song01 = objectCreator("The Color Violet", "Tory Lanes", "2021");
+const song02 = objectCreator("Is There Someone Else?", "The Weeknd", "2022");
 console.log(song01, song02)
