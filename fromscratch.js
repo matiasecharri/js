@@ -283,14 +283,25 @@ dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
 console.log(dibellaWeasly, matiasPotter, claudito, cochito);
 
-function elDni(nombre, apellido) {
-  let personaEntera = `${nombre} ${apellido}`;
-  return personaEntera
+function humanGenerator(nombre, apellido, edad, animo, dni, colorFav) {
+  let humanito = {
+    name: nombre,
+    surname: apellido,
+    age: edad,
+    mood: animo,
+    dni: dni,
+    favoriteColor: colorFav,
+  };
+  return humanito;
 }
 
-let persona1 = elDni("Dibella", "Weasly")
-let personas2 = elDni("Matias", "Potter")
+let gatito1 = humanGenerator(
+  "Milo",
+  "Milito",
+  2,
+  "esquizofrenico",
+  0800111,
+  "naranja"
+);
 
-console.log(persona1)
-console.log(personas2)
-
+console.log(gatito1);
