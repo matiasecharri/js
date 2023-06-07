@@ -282,3 +282,10 @@ dibellaWeasly.nameOfTheHuman = dibellaWeasly.nameOfTheHuman.toLowerCase();
 dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
 console.log(dibellaWeasly, matiasPotter, claudito, cochito);
+
+function sumandoAndo(numeroUno, numeroDos, numeroTres, numero4, numero5) {
+  console.log(numeroUno + numeroDos + numeroTres * numero4 - numero5);
+}
+
+sumandoAndo(9, 10, 2, 8, 2);
+sumandoAndo(1, 4, 5, 3, 45);
