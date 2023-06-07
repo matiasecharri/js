@@ -237,9 +237,16 @@ const autoEvolucionado = () => {
   console.log("LOLOLOLOL");
 };
 
-const elVerdaderoCarro = (tipoDeCarro, modeloExacto, numeroDeContacto) => {
-  let especificacionesDelCarro = `La clase de auto que estamos vendiendo es ${tipoDeCarro.toLowerCase()} y el modelo exacto es ${modeloExacto}, si te interesa llamanos al siguiente numero telefonico ${numeroDeContacto}, saludes chiques.`;
-  console.log(especificacionesDelCarro);
+//CREATING OBJECTS WITH A SIMPLE FUNCTION 🉐 // 
+const theSongPlaying = (songName, songAuthor, songDate) => {
+  let song = {
+    songName: songName,
+    songAuthor: songAuthor,
+    songDate: songDate,
+  };
+  return song;
 };
-elVerdaderoCarro("HutchbackDDD", "Peugeot 208", "15-78456121");
-elVerdaderoCarro("sedan", "la humiDDDDde", "15-78456121");
+
+const song01 = theSongPlaying("The Color Violet", "Tory Lanes", "2021");
+const song02 = theSongPlaying("Is There Someone Else?", "The Weeknd", "2022");
+console.log(song01, song02)
