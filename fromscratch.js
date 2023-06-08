@@ -283,7 +283,23 @@ dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
 console.log(dibellaWeasly, matiasPotter, claudito, cochito);
 
+const mamushka = [
+  "mamushka",
+  "mamushka2",
+  [
+    "mamushkaJudia",
+    [
+      "mamushka8",
+      [
+        "mamushka9",
+        mamushkaBossFinal = {
+          propiedad1: "invensible",
+          propiedad2: "idiota",
+        },
+      ],
+    ],
+  ],
+];
 
-const arrayDeCosas = ["Pato", 2, "Saludes chiques", null,["hola","chau",[3,4,5]]]
+console.log(mamushka[2][1][1][1].propiedad1);
 
-console.log(arrayDeCosas[4][2][2])
