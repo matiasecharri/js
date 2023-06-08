@@ -269,9 +269,6 @@ const dibellaWeasly = humanCreator(
   "Light Brown",
   "Sad/Shinji"
 );
-const matiasPotter = humanCreator("Matias", 24, "Brown", "Neutral");
-const claudito = humanCreator("Claudio", null, "Black");
-const cochito = humanCreator("Cocho", null, "Black and White", "Lazy");
 
 dibellaWeasly.emotionalState = "Happy";
 dibellaWeasly.hairColor = "Light Brown, with black ends";
@@ -281,25 +278,7 @@ dibellaWeasly.personCode = 43043075;
 dibellaWeasly.nameOfTheHuman = dibellaWeasly.nameOfTheHuman.toLowerCase();
 dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
-console.log(dibellaWeasly, matiasPotter, claudito, cochito);
+console.log(dibellaWeasly);
 
-const mamushka = [
-  "mamushka",
-  "mamushka2",
-  [
-    "mamushkaJudia",
-    [
-      "mamushka8",
-      [
-        "mamushka9",
-        mamushkaBossFinal = {
-          propiedad1: "invensible",
-          propiedad2: "idiota",
-        },
-      ],
-    ],
-  ],
-];
 
-console.log(mamushka[2][1][1][1].propiedad1);
 
