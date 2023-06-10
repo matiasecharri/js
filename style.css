@@ -83,7 +83,6 @@ main img {
   object-fit: cover;
 }
 
-
 /* 🟣 🫧 Loader*/
 .loader {
   z-index: 20;
@@ -149,7 +148,52 @@ main img {
 
 /*  BAR */
 #progressBar {
+  -webkit-appearance: none;
+  appearance: none;
   width: 270px;
+  border: none !important;
+  margin-top: 12px;
+  background-color: #898989;
+  border-radius: 180px;
+  height: 1px;
+  cursor: pointer;
+}
+
+#progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #303030;
+  -webkit-clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  margin-top: 0px;
 }
 
 /*  Button Container */
@@ -324,13 +368,25 @@ main img {
 /* 🟣 🫧 Light Classes */
 .lighter {
   color: #c9c9c9;
+
   --hover-btn-color: #985ca7;
+}
+
+.lighter2 {
+  background-color: #c9c9c9 !important;
+}
+
+#progressBar.lighter2::-webkit-slider-thumb {
+  background-color: #c9c9c9
+}
+
+#progressBar.lighter2::-moz-range-thumb {
+  background-color: #c9c9c9
 }
 
 .colored {
   color: #868686 !important;
 }
-
 
 /* 🟣 🫧 Mediaqueries */
 @media only screen and (max-width: 834px) {
@@ -342,7 +398,6 @@ main img {
 
 @media only screen and (max-height: 750px) {
   main img {
-   
     object-fit: cover !important;
     height: 65% !important;
     margin-top: 15px !important;
@@ -356,8 +411,6 @@ main img {
 
 @media only screen and (max-height: 450px) {
   main img {
-    
-
     object-fit: cover !important;
     height: 55% !important;
     margin-bottom: 10px;
@@ -366,8 +419,6 @@ main img {
 
 @media only screen and (max-height: 150px) {
   main img {
-  
-
     object-fit: cover !important;
     height: 5% !important;
     margin-bottom: 10px;

@@ -1,4 +1,3 @@
-
 /* 🫐🫧☂️💜⚛️ BUTTON PLAYER */
 function buttonPlayer() {
   let container = document.getElementById("main1");
@@ -76,6 +75,7 @@ function nightDayMode() {
   let previousB = document.getElementById("previousButton");
   let playB = document.getElementById("playButton");
   let nextB = document.getElementById("nextButton");
+  let playerBar = document.getElementById("progressBar");
   let themeSwitcher = false;
 
   //Get the user actual HOUR
@@ -90,6 +90,7 @@ function nightDayMode() {
     previousB.classList.add("lighter");
     playB.classList.add("lighter");
     nextB.classList.add("lighter");
+    playerBar.classList.add("lighter2");
     themeSwitcher = true;
   }
   //Function to Apply the Light Mode
@@ -98,6 +99,7 @@ function nightDayMode() {
     previousB.classList.remove("lighter");
     playB.classList.remove("lighter");
     nextB.classList.remove("lighter");
+    playerBar.classList.remove("lighter2");
     themeSwitcher = false;
   }
 
@@ -280,6 +282,3 @@ dibellaWeasly.nameOfTheHuman = dibellaWeasly.nameOfTheHuman.toLowerCase();
 dibellaWeasly.personCode = dibellaWeasly.personCode.toString();
 
 console.log(dibellaWeasly);
-
-
-
