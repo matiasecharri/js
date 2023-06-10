@@ -153,7 +153,7 @@ main img {
   width: 270px;
   border: none !important;
   margin-top: 12px;
-  background-color: #898989;
+  background-color: #a8a8a8;
   border-radius: 180px;
   height: 1px;
   cursor: pointer;
@@ -193,18 +193,35 @@ main img {
     80% 0%,
     50% 30%
   );
+  transition: background-color 0.3s;
+  animation: ease-in-out;
   margin-top: 0px;
+}
+
+#progressBar:hover::-webkit-slider-thumb {
+  background-color: #ff06a4;
+}
+
+#progressBar:hover::-moz-range-thumb {
+  background-color: #ff06a4;
 }
 
 /*  Button Container */
 .buttonContainer {
-  width: 100%;
-
+  width: 428px;
+  background-color:  #FFFF00;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
   height: 2vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lightercontainer{
+  background-color: #0000003a;
 }
 
 /*  Buttons */
@@ -365,7 +382,7 @@ main img {
   }
 }
 
-/* 🟣 🫧 Light Classes */
+/* 🟣 🫧 Lighter Classes for Night Mode*/
 .lighter {
   color: #c9c9c9;
 
@@ -373,15 +390,23 @@ main img {
 }
 
 .lighter2 {
-  background-color: #c9c9c9 !important;
+  background-color: #9b9a9a73 !important;
 }
 
 #progressBar.lighter2::-webkit-slider-thumb {
-  background-color: #c9c9c9
+  background-color: #c9c9c9;
 }
 
 #progressBar.lighter2::-moz-range-thumb {
-  background-color: #c9c9c9
+  background-color: #c9c9c9;
+}
+
+#progressBar.lighter2:hover::-webkit-slider-thumb {
+  background-color: #985ca7;
+}
+
+#progressBar.lighter2:hover::-moz-range-thumb {
+  background-color: #985ca7;
 }
 
 .colored {
@@ -394,6 +419,7 @@ main img {
     background-image: url(./assets/cblack.jpg);
     background-position: 28%;
   }
+  
 }
 
 @media only screen and (max-height: 750px) {
@@ -401,6 +427,10 @@ main img {
     object-fit: cover !important;
     height: 65% !important;
     margin-top: 15px !important;
+    
+  }
+  .buttonContainer{
+    margin-top: 30px;
   }
 
   .batmanMode {
@@ -415,6 +445,10 @@ main img {
     height: 55% !important;
     margin-bottom: 10px;
   }
+
+  .buttonContainer{
+    margin-top:40px;
+  }
 }
 
 @media only screen and (max-height: 150px) {
@@ -427,4 +461,9 @@ main img {
 
 audio {
   border-radius: 0px;
+}
+
+
+#playButton.lighter.hoverLighter:hover {
+color: #63f0d0;
 }
