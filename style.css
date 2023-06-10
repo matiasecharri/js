@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* 🟣 🫧 Main container, inside of this is the visualizer*/
 main {
   background-color: rgb(249, 249, 249);
   background-image: url(./assets/c.jpg);
@@ -41,13 +42,14 @@ audio::-webkit-media-controls-panel {
   border-radius: 0px;
 }
 
+/* 🟣 🫧 Visualizer and animations*/
+
 main img {
   /* Estilos iniciales */
   width: 150px;
   height: 555px;
   object-fit: cover;
   border-radius: 360px;
-  
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition-duration: 0.8s; /* Agregar una duración de transición por defecto */
@@ -81,6 +83,8 @@ main img {
   object-fit: cover;
 }
 
+
+/* 🟣 🫧 Loader*/
 .loader {
   z-index: 20;
   border: 4px solid rgba(0, 0, 0, 0.1);
@@ -116,6 +120,7 @@ main img {
   }
 }
 
+/* 🟣 🫧 Alternative BACKGROUNDS */
 .megastyled {
   background-image: none;
   background-image: url(/assets/e.jpg);
@@ -129,15 +134,36 @@ main img {
   background-size: cover;
 }
 
-.buttonContainer {
+/* 🟣 🫧 Interface container */
+
+.interfacePlayer {
+  position: absolute;
   width: 100%;
   height: 14vh;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/*  BAR */
+#progressBar {
+  width: 270px;
+}
+
+/*  Button Container */
+.buttonContainer {
+  width: 100%;
+
+  height: 2vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/*  Buttons */
 .ui-btn {
   --btn-default-bg: rgba(245, 237, 237, 0);
   --btn-padding: 15px 20px;
@@ -295,6 +321,7 @@ main img {
   }
 }
 
+/* 🟣 🫧 Light Classes */
 .lighter {
   color: #c9c9c9;
   --hover-btn-color: #985ca7;
@@ -304,6 +331,8 @@ main img {
   color: #868686 !important;
 }
 
+
+/* 🟣 🫧 Mediaqueries */
 @media only screen and (max-width: 834px) {
   .batmanMode {
     background-image: url(./assets/cblack.jpg);
@@ -313,8 +342,7 @@ main img {
 
 @media only screen and (max-height: 750px) {
   main img {
-    /* Estilos iniciales */
-
+   
     object-fit: cover !important;
     height: 65% !important;
     margin-top: 15px !important;
@@ -328,7 +356,7 @@ main img {
 
 @media only screen and (max-height: 450px) {
   main img {
-    /* Estilos iniciales */
+    
 
     object-fit: cover !important;
     height: 55% !important;
@@ -338,7 +366,7 @@ main img {
 
 @media only screen and (max-height: 150px) {
   main img {
-    /* Estilos iniciales */
+  
 
     object-fit: cover !important;
     height: 5% !important;
@@ -346,8 +374,6 @@ main img {
   }
 }
 
-audio{
+audio {
   border-radius: 0px;
-  
 }
-
