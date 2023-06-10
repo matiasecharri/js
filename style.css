@@ -209,7 +209,7 @@ main img {
 /*  Button Container */
 .buttonContainer {
   width: 428px;
-  background-color:  #FFFF00;
+  background-color:  #7cffeb21;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 15px;
@@ -221,7 +221,7 @@ main img {
 }
 
 .lightercontainer{
-  background-color: #0000003a;
+  background-color: #36363734;
 }
 
 /*  Buttons */

@@ -1,3 +1,14 @@
+const audio = document.getElementById("myAudio");
+const progressBar = document.getElementById("progressBar");
+
+// Actualizar la posición de la barra de rango
+function updateProgressBar() {
+  const progress = (audio.currentTime / audio.duration) * 100;
+  progressBar.value = progress;
+}
+
+// Escuchar el evento de tiempo actualizado del audio
+audio.addEventListener("timeupdate", updateProgressBar);
 // 🫐🫧☂️💜⚛️ BUTTON PLAYER
 function buttonPlayer() {
   let container = document.getElementById("main1");
@@ -53,11 +64,9 @@ function buttonPlayer() {
     let audio = document.getElementById("myAudio");
     if (audio.paused) {
       audio.play();
-
       changeImage();
     } else {
       audio.pause();
-
       resetPlayer();
     }
   });
@@ -84,7 +93,7 @@ function nightDayMode() {
   let nextB = document.getElementById("nextButton");
   let playPauseB = document.getElementById("playButton");
   let playerBar = document.getElementById("progressBar");
-  let buttonContainer = document.getElementById("buttonContainerX")
+  let buttonContainer = document.getElementById("buttonContainerX");
   let themeSwitcher = false;
 
   const currentHour = new Date().getHours();
@@ -133,3 +142,21 @@ function nightDayMode() {
 buttonPlayer();
 comeBackTitleChanger();
 nightDayMode();
+
+
+// Obtener elementos después de la carga del DOM
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("myAudio");
+  const progressBar = document.getElementById("progressBar");
+
+  // Actualizar la posición de reproducción del audio
+  function updatePlaybackPosition() {
+    const progress = progressBar.value;
+    const duration = audio.duration;
+    const newPosition = (progress / 100) * duration;
+    audio.currentTime = newPosition;
+  }
+
+  // Escuchar el evento de cambio de la barra de rango
+  progressBar.addEventListener("input", updatePlaybackPosition);
+});
