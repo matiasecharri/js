@@ -1,3 +1,15 @@
+function comingSoon() {
+  let previousB = document.getElementById("previousButton");
+  let nextB = document.getElementById("nextButton");
+  previousB.addEventListener("click", (x) => {
+    alert("Coming soon :)");
+  });
+  nextB.addEventListener("click", (x) => {
+    alert("Coming soon :)");
+  });
+}
+comingSoon();
+
 // 🫐🫧☂️💜⚛️ RANGE BAR PROGRESS
 const audio = document.getElementById("myAudio");
 const progressBar = document.getElementById("progressBar");
