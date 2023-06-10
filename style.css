@@ -485,3 +485,20 @@ audio {
 #playButton.lighter.hoverLighter:hover {
   color: #63f0d0;
 }
+
+/* Estilos personalizados para SweetAlert */
+.swal2-popup {
+  font-family: monospace;
+  padding-top: 20px;
+  font-size: 9px;
+  color: rgb(182, 174, 174);
+  font-weight: 100;
+  width: 250px;
+  border-radius: 8px;
+  background-color: #020201c0; /* Cambia el color de fondo a #f2f2f2 o el color deseado */
+}
+
+.swal2-popup h2 {
+  font-weight: 500;
+  font-size: 15px;
+}
