@@ -422,11 +422,11 @@ main img {
   
 }
 
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 850px) {
   main img {
     object-fit: cover !important;
     height: 65% !important;
-    margin-top: 15px !important;
+    margin-top: 85px !important;
     
   }
   .buttonContainer{
@@ -456,6 +456,7 @@ main img {
     object-fit: cover !important;
     height: 5% !important;
     margin-bottom: 10px;
+    display: none;
   }
 }
 
