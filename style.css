@@ -209,7 +209,7 @@ main img {
 /*  Button Container */
 .buttonContainer {
   width: 428px;
-  background-color:  #7cffeb21;
+  background-color: #7cffeb21;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 15px;
@@ -220,7 +220,7 @@ main img {
   align-items: center;
 }
 
-.lightercontainer{
+.lightercontainer {
   background-color: #36363734;
 }
 
@@ -419,7 +419,26 @@ main img {
     background-image: url(./assets/cblack.jpg);
     background-position: 28%;
   }
-  
+}
+
+@media only screen and (max-width: 500px) {
+  .buttonContainer button {
+    font-size: 10px;
+    padding: 6px;
+  }
+  .buttonContainer {
+    width: 325px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .buttonContainer button {
+    font-size: 9px;
+    padding: 6px;
+  }
+  .buttonContainer {
+    width: 305px;
+  }
 }
 
 @media only screen and (max-height: 850px) {
@@ -427,9 +446,8 @@ main img {
     object-fit: cover !important;
     height: 65% !important;
     margin-top: 85px !important;
-    
   }
-  .buttonContainer{
+  .buttonContainer {
     margin-top: 30px;
   }
 
@@ -446,8 +464,8 @@ main img {
     margin-bottom: 10px;
   }
 
-  .buttonContainer{
-    margin-top:40px;
+  .buttonContainer {
+    margin-top: 40px;
   }
 }
 
@@ -464,7 +482,6 @@ audio {
   border-radius: 0px;
 }
 
-
 #playButton.lighter.hoverLighter:hover {
-color: #63f0d0;
+  color: #63f0d0;
 }
