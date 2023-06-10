@@ -17,25 +17,27 @@
     <audio
       id="myAudio"
       src="/assets/songs/the_violet_color_tory_lanes.mp3"
-      controls
     ></audio>
-
-    <div class="buttonContainer">
+    <div class="interfacePlayer">
+      <div class="buttonContainer" id="buttonContainerX">
+        <!-- ////////////////////////////////////////CONTROLLS ///// -->
         <button class="ui-btn" id="previousButton">
-        <span> < PREVIOUS </span></button
-      ><button class="ui-btn" id="playButton">
-        <span id="daynightmode"> DAY/NIGHT </span>
-      </button>
-      <button class="ui-btn" id="nextButton">
-        <span> NEXT > </span>
-      </button>
+          <span> < PREVIOUS </span>
+        </button>
+        <button class="ui-btn" id="themeButton">
+          <span id="daynightmode"> DAY/NIGHT </span>
+        </button>
+        <button class="ui-btn" id="playButton">
+          <span> PLAY/PAUSE </span>
+        </button>
+        <button class="ui-btn" id="nextButton"><span> NEXT > </span></button>
+      </div>
+      <!-- ////////////////////////////////////////CONTROLLS ///// -->
+      <input type="range" value="0" id="progressBar" />
     </div>
     <main id="main1"></main>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
     <script src="/fromscratch.js"></script>
   </body>
 </html>
