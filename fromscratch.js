@@ -57,12 +57,20 @@ comingSoon();
 // 🫐🫧☂️💜⚛️ RANGE BAR PROGRESS
 const audio = document.getElementById("myAudio");
 const progressBar = document.getElementById("progressBar");
+const volumeBar = document.getElementById("volumeBar");
 
 function updateProgressBar() {
   const progress = (audio.currentTime / audio.duration) * 100;
   progressBar.value = progress;
 }
+
+function updateVolume() {
+  const volume = volumeBar.value / 100;
+  audio.volume = volume;
+}
+
 audio.addEventListener("timeupdate", updateProgressBar);
+volumeBar.addEventListener("input", updateVolume);
 
 // 🫐🫧☂️💜⚛️ BUTTON PLAYER
 function buttonPlayer() {
@@ -148,6 +156,7 @@ function nightDayMode() {
   let nextB = document.getElementById("nextButton");
   let playPauseB = document.getElementById("playButton");
   let playerBar = document.getElementById("progressBar");
+  let volumeBar = document.getElementById("volumeBar");
   let buttonContainer = document.getElementById("buttonContainerX");
   let themeSwitcher = false;
 
@@ -156,12 +165,15 @@ function nightDayMode() {
 
   function enableDarkMode() {
     container.classList.add("batmanMode");
+    container.style.transition = "0.5s";
     previousB.classList.add("lighter");
     playB.classList.add("lighter");
     nextB.classList.add("lighter");
     playPauseB.classList.add("lighter");
     playerBar.classList.add("lighter2");
+    volumeBar.classList.add("lighter2");
     buttonContainer.classList.add("lightercontainer");
+
     themeSwitcher = true;
   }
 
@@ -172,7 +184,9 @@ function nightDayMode() {
     nextB.classList.remove("lighter");
     playPauseB.classList.remove("lighter");
     playerBar.classList.remove("lighter2");
+    volumeBar.classList.remove("lighter2");
     buttonContainer.classList.remove("lightercontainer");
+    container.style.transition = "0.5s";
     themeSwitcher = false;
   }
 
