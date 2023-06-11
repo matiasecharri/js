@@ -409,6 +409,33 @@ main img {
   background-color: #985ca7;
 }
 
+.lighter2 {
+  background-color: #9b9a9a73 !important;
+}
+
+#volumeBar.lighter2::-webkit-slider-thumb {
+  background-color: #c9c9c9;
+}
+
+#volumeBar.lighter2::-moz-range-thumb {
+  background-color: #c9c9c9;
+}
+
+#volumeBar.lighter2:hover::-webkit-slider-thumb {
+  background-color: #985ca7;
+}
+
+#volumeBar.lighter2:hover::-moz-range-thumb {
+  background-color: #985ca7;
+}
+
+
+
+
+
+
+
+
 .colored {
   color: #868686 !important;
 }
@@ -497,17 +524,76 @@ audio {
 
 /* Estilos personalizados para SweetAlert */
 .swal2-popup {
-  font-family: monospace;
-  padding-top: 20px;
-  font-size: 9px;
-  color: rgb(182, 174, 174);
-  font-weight: 100;
-  width: 250px;
-  border-radius: 8px;
-  background-color: #020201c0; /* Cambia el color de fondo a #f2f2f2 o el color deseado */
+  font-family: monospace !important;
+  padding-top: 20px !important;
+  font-size: 9px !important;
+  color: rgb(182, 174, 174) !important;
+  font-weight: 100 !important;
+  width: 300px !important;
+  border-radius: 8px !important;
+  background-color: #020201c0 !important; /* Cambia el color de fondo a #f2f2f2 o el color deseado */
 }
 
 .swal2-popup h2 {
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+}
+
+#volumeBar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 270px;
+  border: none !important;
+  margin-top: 12px;
+  background-color: #a8a8a8;
+  border-radius: 180px;
+  height: 1px;
+  cursor: pointer;
+}
+
+#volumeBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #303030;
+  -webkit-clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  transition: background-color 0.3s;
+  animation: ease-in-out;
+  margin-top: 0px;
+}
+
+#volumeBar:hover::-webkit-slider-thumb {
+  background-color: #ff06a4;
+}
+
+#volumeBar:hover::-moz-range-thumb {
+  background-color: #ff06a4;
 }
