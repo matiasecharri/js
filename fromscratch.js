@@ -84,12 +84,12 @@ function buttonPlayer() {
   function changeImage() {
     if (imageCounter === 1) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img data-aos="fade-up" data-aos-duration="400" src="assets/v7c.gif" alt="visualizer_01"loading="lazy"/> `;
+      container.innerHTML = `<img data-aos="fade-up" data-aos-duration="400" src="assets/v5c.gif" alt="visualizer_01" loading="lazy"/> `;
       document.title = "visualizer_01";
       imageCounter = 2;
     } else if (imageCounter === 2) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v7c.gif" alt="visualizer_02"/>`;
+      container.innerHTML = `<img src="assets/v7c.gif" alt="visualizer_02" loading="lazy"/>`;
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
