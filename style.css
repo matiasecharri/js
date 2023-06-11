@@ -414,6 +414,15 @@ main img {
 }
 
 /* 🟣 🫧 Mediaqueries */
+
+@media only screen and (min-width: 1600px) {
+  /* Agrega aquí tus estilos para la resolución de 1900px en adelante */
+  /* Por ejemplo: */
+  .buttonContainer {
+    width: 490px;
+  }
+}
+
 @media only screen and (max-width: 834px) {
   .batmanMode {
     background-image: url(./assets/cblack.jpg);
