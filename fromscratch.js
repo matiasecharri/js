@@ -1,3 +1,4 @@
+//ALERT, JUST DELETE  THIS FUNCTION WHEN YOU ADD NEW SONGS
 function comingSoon() {
   let previousB = document.getElementById("previousButton");
   let nextB = document.getElementById("nextButton");
@@ -51,6 +52,7 @@ function comingSoon() {
   });
 }
 comingSoon();
+////////////////////////////////////////////////////
 
 // 🫐🫧☂️💜⚛️ RANGE BAR PROGRESS
 const audio = document.getElementById("myAudio");
@@ -60,7 +62,6 @@ function updateProgressBar() {
   const progress = (audio.currentTime / audio.duration) * 100;
   progressBar.value = progress;
 }
-
 audio.addEventListener("timeupdate", updateProgressBar);
 
 // 🫐🫧☂️💜⚛️ BUTTON PLAYER
