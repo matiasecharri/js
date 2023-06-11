@@ -67,6 +67,7 @@ function updateProgressBar() {
 function updateVolume() {
   const volume = volumeBar.value / 100;
   audio.volume = volume;
+  // console.log(volume)
 }
 
 audio.addEventListener("timeupdate", updateProgressBar);
@@ -88,34 +89,35 @@ function buttonPlayer() {
       imageCounter = 2;
     } else if (imageCounter === 2) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v7.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v7.gif" alt="visualizer_02" />`;
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v3.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v3.gif" alt="the_violet_color" />`;
       document.title = "the_violet_color";
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v4.gif" alt="" />`;
+      container.innerHTML = `<img src="assets/v4.gif" alt="visualizer_03" style="object-fit: cover; object-position: 52%;" />`;
       document.title = "visualizer_03";
       imageCounter = 5;
     } else if (imageCounter === 5) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v5.gif" "alt="" />`;
+      container.innerHTML = `<img src="assets/v5.gif" "alt="visualizer_04" />`;
       document.title = "visualizer_04";
       imageCounter = 6;
     } else if (imageCounter === 6) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v8.gif" alt="" />`;
-      document.title = "visualizer_01";
+      container.innerHTML = `<img src="assets/v6.gif" alt="visualizer_05" style="object-fit: cover; object-position: 75%;" />`;
+      document.title = "visualizer_05";
       imageCounter = 2;
     }
   }
 
   function resetPlayer() {
     container.classList.remove("megastyled");
+    container.style.transition = "0s";
     container.innerHTML = `
     <p id="playToReco" class="colored">play to re-connect</p>
     <div class="loader"></div>
