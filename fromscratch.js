@@ -141,6 +141,7 @@ function comeBackTitleChanger() {
 
 // 🫐🫧☂️💜⚛️ NIGHT-DAY MODE
 function nightDayMode() {
+  const body = document.querySelector("body");
   let container = document.getElementById("main1");
   let buttonNight = document.getElementById("daynightmode");
   let previousB = document.getElementById("previousButton");
@@ -156,12 +157,14 @@ function nightDayMode() {
 
   function enableDarkMode() {
     container.classList.add("batmanMode");
+    container.style.transition = "1s";
     previousB.classList.add("lighter");
     playB.classList.add("lighter");
     nextB.classList.add("lighter");
     playPauseB.classList.add("lighter");
     playerBar.classList.add("lighter2");
     buttonContainer.classList.add("lightercontainer");
+
     themeSwitcher = true;
   }
 
@@ -173,6 +176,7 @@ function nightDayMode() {
     playPauseB.classList.remove("lighter");
     playerBar.classList.remove("lighter2");
     buttonContainer.classList.remove("lightercontainer");
+    container.style.transition = "1s";
     themeSwitcher = false;
   }
 
