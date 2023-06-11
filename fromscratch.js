@@ -84,32 +84,32 @@ function buttonPlayer() {
   function changeImage() {
     if (imageCounter === 1) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img data-aos="fade-up" data-aos-duration="400" src="assets/v5c.gif" alt="visualizer_01/> `;
+      container.innerHTML = `<img data-aos="fade-up" data-aos-duration="400" src="assets/v5c.gif" alt="visualizer_01" /> `;
       document.title = "visualizer_01";
       imageCounter = 2;
     } else if (imageCounter === 2) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v7c.gif" alt="visualizer_02/>`;
+      container.innerHTML = `<img src="assets/v7c.gif" alt="visualizer_02" />`;
       document.title = "visualizer_02";
       imageCounter = 3;
     } else if (imageCounter === 3) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v3c.gif" alt="the_violet_color/>`;
+      container.innerHTML = `<img src="assets/v3c.gif" alt="the_violet_color" />`;
       document.title = "the_violet_color";
       imageCounter = 4;
     } else if (imageCounter === 4) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v4c.gif" alt="visualizer_03" style="object-fit: cover; object-position: 52%;/>`;
+      container.innerHTML = `<img src="assets/v4c.gif" alt="visualizer_03" style="object-fit: cover; object-position: 52%;" />`;
       document.title = "visualizer_03";
       imageCounter = 5;
     } else if (imageCounter === 5) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v5c.gif" "alt="visualizer_04/>`;
+      container.innerHTML = `<img src="assets/v5c.gif" "alt="visualizer_04" />`;
       document.title = "visualizer_04";
       imageCounter = 6;
     } else if (imageCounter === 6) {
       container.classList.add("megastyled");
-      container.innerHTML = `<img src="assets/v6c.gif" alt="visualizer_05" style="object-fit: cover; object-position: 75%;/>`;
+      container.innerHTML = `<img src="assets/v6c.gif" alt="visualizer_05" style="object-fit: cover; object-position: 75%;" />`;
       document.title = "visualizer_05";
       imageCounter = 2;
     }
