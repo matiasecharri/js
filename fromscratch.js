@@ -1,13 +1,81 @@
+const songs = [
+  {
+    title: "the_violet_color",
+    src: "assets/songs/the_violet_color_tory_lanes.mp3",
+  },
+  {
+    title: "is_there_someone_else",
+    src: "assets/songs/is_there_someone_else.mp3",
+  },
+  // Agrega más canciones aquí
+];
+
+let imageCounter = 2;
+function changeImage22() {
+  let container = document.getElementById("main1");
+  if (imageCounter === 1) {
+    container.classList.add("megastyled");
+    container.innerHTML = `hallo`;
+    document.title = "visualizer_01";
+    imageCounter = 2;
+  } else if (imageCounter === 2) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v7c.gif" alt="visualizer_02" loading="lazy"/>`;
+    document.title = "visualizer_02";
+    imageCounter = 3;
+  } else if (imageCounter === 3) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v3c.gif" alt="the_violet_color" loading="lazy"/>`;
+    document.title = "the_violet_color";
+    imageCounter = 4;
+  } else if (imageCounter === 4) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v4c.gif" alt="visualizer_03" style="object-fit: cover; object-position: 52%;" loading="lazy"/>`;
+    document.title = "visualizer_03";
+    imageCounter = 5;
+  } else if (imageCounter === 5) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v5c.gif" "alt="visualizer_04" loading="lazy"/>`;
+    document.title = "visualizer_04";
+    imageCounter = 6;
+  } else if (imageCounter === 6) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v6c.gif" alt="visualizer_05" style="object-fit: cover; object-position: 75%;" loading="lazy"/>`;
+    document.title = "visualizer_05";
+    imageCounter = 2;
+  }
+}
+
+const audio = document.getElementById("myAudio");
+audio.src = songs[0].src;
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("myAudio");
+  audio.src = songs[0].src;
+});
+
 //ALERT, JUST DELETE  THIS FUNCTION WHEN YOU ADD NEW SONGS
 function comingSoon() {
   let previousB = document.getElementById("previousButton");
   let nextB = document.getElementById("nextButton");
+  let currentSong = 0;
   previousB.addEventListener("click", (x) => {
+    currentSong++; // Incrementar el índice de la canción actual
+    if (currentSong >= songs.length) {
+      currentSong = 0;
+      // Volver al inicio de la lista
+    }
+
+    imageCounter = imageCounter++;
+    const nextSong = songs[currentSong];
+    audio.src = nextSong.src; // Actualizar la fuente del elemento de audio con la nueva canción
+    audio.play(); // Reproducir la nueva canción
+
+    changeImage22(); // Cambiar la imagen
     let timerInterval;
     Swal.fire({
-      title: "./visualizer01/in_progress",
-      html: "I will close in <b></b> milliseconds.",
-      timer: 2000,
+      title: `${songs[currentSong].title.toUpperCase()}()`,
+      html: "closing in <b></b> milliseconds",
+      timer: 1300,
       timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading();
@@ -22,16 +90,28 @@ function comingSoon() {
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
-        console.log("I was closed by the timer");
+        console.log("coded and designed - @matiasecharri_");
       }
     });
   });
   nextB.addEventListener("click", (x) => {
+    currentSong++; // Incrementar el índice de la canción actual
+    if (currentSong >= songs.length) {
+      currentSong = 0;
+      // Volver al inicio de la lista
+    }
+
+    imageCounter = imageCounter++;
+    const nextSong = songs[currentSong];
+    audio.src = nextSong.src; // Actualizar la fuente del elemento de audio con la nueva canción
+    audio.play(); // Reproducir la nueva canción
+
+    changeImage22(); // Cambiar la imagen
     let timerInterval;
     Swal.fire({
-      title: "./visualizer01/in_progress",
-      html: "I will close in <b></b> milliseconds.",
-      timer: 2000,
+      title: `${songs[currentSong].title.toUpperCase()}()`,
+      html: "closing in <b></b> milliseconds",
+      timer: 1300,
       timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading();
@@ -46,7 +126,7 @@ function comingSoon() {
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
-        console.log("I was closed by the timer");
+        console.log("coded and designed - @matiasecharri_");
       }
     });
   });
@@ -55,7 +135,7 @@ comingSoon();
 ////////////////////////////////////////////////////
 
 // 🫐🫧☂️💜⚛️ RANGE BAR PROGRESS
-const audio = document.getElementById("myAudio");
+
 const progressBar = document.getElementById("progressBar");
 const volumeBar = document.getElementById("volumeBar");
 
