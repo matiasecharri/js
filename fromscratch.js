@@ -1,13 +1,115 @@
+const songs = [
+  {
+    title: "the_violet_color",
+    src: "assets/songs/the_violet_color_tory_lanes.mp3",
+    artist: "tory_lanez",
+  },
+  {
+    title: "is_there_someone_else",
+    src: "assets/songs/is_there_someone_else.mp3",
+    artist: "the_weeknd",
+  },
+  {
+    title: "chippin_in",
+    src: "assets/songs/chippin_in_samurai.mp3",
+    artist: "samurai",
+  },
+];
+
+let imageCounter = 2;
+function changeImage22() {
+  let container = document.getElementById("main1");
+  if (imageCounter === 1) {
+    container.classList.add("megastyled");
+    container.innerHTML = `hallo`;
+    document.title = "visualizer_01";
+    imageCounter = 2;
+  } else if (imageCounter === 2) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v5c.gif" alt="visualizer_02" loading="lazy"/>`;
+    document.title = "visualizer_02";
+    imageCounter = 3;
+  } else if (imageCounter === 3) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v3c.gif" alt="the_violet_color" loading="lazy"/>`;
+    document.title = "the_violet_color";
+    imageCounter = 4;
+  } else if (imageCounter === 4) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v4c.gif" alt="visualizer_03" style="object-fit: cover; object-position: 52%;" loading="lazy"/>`;
+    document.title = "visualizer_03";
+    imageCounter = 5;
+  } else if (imageCounter === 5) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v5c.gif" "alt="visualizer_04" loading="lazy"/>`;
+    document.title = "visualizer_04";
+    imageCounter = 6;
+  } else if (imageCounter === 6) {
+    container.classList.add("megastyled");
+    container.innerHTML = `<img src="assets/v6c.gif" alt="visualizer_05" style="object-fit: cover; object-position: 75%;" loading="lazy"/>`;
+    document.title = "visualizer_05";
+    imageCounter = 2;
+  }
+}
+
+const audio = document.getElementById("myAudio");
+audio.src = songs[0].src;
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("myAudio");
+  audio.src = songs[0].src;
+});
+
+
+function updateNowPlaying() {
+  let container = document.getElementById("main1");
+  console.log(currentSong);
+  if (currentSong === "chippin_in") {
+    if (audio.paused) {
+      container.innerHTML = `
+        <p id="playToReco" class="colored">play to re-connect</p>
+        <div class="loader"></div>
+      `;
+      document.title = "now_paused";
+    } else {
+      container.innerHTML = `<img src="assets/v8c.gif" alt="visualizer_05" loading="lazy"/>`;
+      document.title = "visualizer_05";
+      imageCounter = 5;
+    }
+  }
+}
+
+
+audio.addEventListener("play", updateNowPlaying);
+audio.addEventListener("pause", updateNowPlaying);
+
+
 //ALERT, JUST DELETE  THIS FUNCTION WHEN YOU ADD NEW SONGS
+let currentSong = null; // Variable global para almacenar el título de la canción actual
+
 function comingSoon() {
   let previousB = document.getElementById("previousButton");
   let nextB = document.getElementById("nextButton");
-  previousB.addEventListener("click", (x) => {
+  let currentSongIndex = 0;
+
+  previousB.addEventListener("click", () => {
+    currentSongIndex++; // Incrementar el índice de la canción actual
+    if (currentSongIndex >= songs.length) {
+      currentSongIndex = 0;
+      // Volver al inicio de la lista
+    }
+
+    const nextSong = songs[currentSongIndex];
+    currentSong = nextSong.title; // Actualizar la variable global con el título de la canción
+    audio.src = nextSong.src; // Actualizar la fuente del elemento de audio con la nueva canción
+    audio.play(); // Reproducir la nueva canción
+
+    changeImage22(); // Cambiar la imagen
+
     let timerInterval;
     Swal.fire({
-      title: "./visualizer01/in_progress",
-      html: "I will close in <b></b> milliseconds.",
-      timer: 2000,
+      title: `${nextSong.title.toUpperCase()}()`,
+      html: "closing in <b></b> milliseconds",
+      timer: 1300,
       timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading();
@@ -22,16 +124,30 @@ function comingSoon() {
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
-        console.log("I was closed by the timer");
+        console.log("coded and designed - @matiasecharri_");
       }
     });
   });
-  nextB.addEventListener("click", (x) => {
+
+  nextB.addEventListener("click", () => {
+    currentSongIndex++; // Incrementar el índice de la canción actual
+    if (currentSongIndex >= songs.length) {
+      currentSongIndex = 0;
+      // Volver al inicio de la lista
+    }
+
+    const nextSong = songs[currentSongIndex];
+    currentSong = nextSong.title; // Actualizar la variable global con el título de la canción
+    audio.src = nextSong.src; // Actualizar la fuente del elemento de audio con la nueva canción
+    audio.play(); // Reproducir la nueva canción
+
+    changeImage22(); // Cambiar la imagen
+
     let timerInterval;
     Swal.fire({
-      title: "./visualizer01/in_progress",
-      html: "I will close in <b></b> milliseconds.",
-      timer: 2000,
+      title: `${nextSong.title.toUpperCase()}()`,
+      html: "closing in <b></b> milliseconds",
+      timer: 1300,
       timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading();
@@ -46,16 +162,17 @@ function comingSoon() {
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
-        console.log("I was closed by the timer");
+        console.log("coded and designed - @matiasecharri_");
       }
     });
   });
 }
+
 comingSoon();
 ////////////////////////////////////////////////////
 
 // 🫐🫧☂️💜⚛️ RANGE BAR PROGRESS
-const audio = document.getElementById("myAudio");
+
 const progressBar = document.getElementById("progressBar");
 const volumeBar = document.getElementById("volumeBar");
 
