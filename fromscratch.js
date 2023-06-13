@@ -10,9 +10,24 @@ const songs = [
     artist: "the_weeknd",
   },
   {
+    title: "out_of_time",
+    src: "assets/songs/out_of_time_the_weeknd.mp3",
+    artist: "the_weeknd",
+  },
+  {
+    title: "after_hours",
+    src: "assets/songs/after_hours_the_weeknd.mp3",
+    artist: "the_weeknd",
+  },
+  {
     title: "chippin_in",
     src: "assets/songs/chippin_in_samurai.mp3",
     artist: "samurai",
+  },
+  {
+    title: "stay_at_your_house",
+    src: "assets/songs/i_really_want_to_stay_at_your_house.mp3",
+    artist: "???",
   },
 ];
 
@@ -59,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.src = songs[0].src;
 });
 
-
 function updateNowPlaying() {
   let container = document.getElementById("main1");
   console.log(currentSong);
@@ -75,13 +89,23 @@ function updateNowPlaying() {
       document.title = "visualizer_05";
       imageCounter = 5;
     }
+  } if (currentSong === "stay_at_your_house") {
+    if (audio.paused) {
+      container.innerHTML = `
+        <p id="playToReco" class="colored">play to re-connect</p>
+        <div class="loader"></div>
+      `;
+      document.title = "now_paused";
+    } else {
+      container.innerHTML = `<img src="assets/v9c.gif" alt="visualizer_09" loading="lazy"/>`;
+      document.title = "vEiRR0Rizer_09";
+      imageCounter = 5;
+    }
   }
 }
 
-
 audio.addEventListener("play", updateNowPlaying);
 audio.addEventListener("pause", updateNowPlaying);
-
 
 //ALERT, JUST DELETE  THIS FUNCTION WHEN YOU ADD NEW SONGS
 let currentSong = null; // Variable global para almacenar el título de la canción actual
@@ -92,22 +116,21 @@ function comingSoon() {
   let currentSongIndex = 0;
 
   previousB.addEventListener("click", () => {
-    currentSongIndex++; // Incrementar el índice de la canción actual
-    if (currentSongIndex >= songs.length) {
-      currentSongIndex = 0;
-      // Volver al inicio de la lista
+    currentSongIndex--; // Decrement the current song index
+    if (currentSongIndex < 0) {
+      currentSongIndex = songs.length - 1; // Set the index to the last song in the array
     }
-
-    const nextSong = songs[currentSongIndex];
-    currentSong = nextSong.title; // Actualizar la variable global con el título de la canción
-    audio.src = nextSong.src; // Actualizar la fuente del elemento de audio con la nueva canción
-    audio.play(); // Reproducir la nueva canción
-
-    changeImage22(); // Cambiar la imagen
-
+  
+    const previousSong = songs[currentSongIndex];
+    currentSong = previousSong.title; // Update the variable global with the title of the previous song
+    audio.src = previousSong.src; // Update the audio source with the new song
+    audio.play(); // Play the new song
+  
+    changeImage22(); // Change the image
+  
     let timerInterval;
     Swal.fire({
-      title: `${nextSong.title.toUpperCase()}()`,
+      title: `${previousSong.title.toUpperCase()}()`,
       html: "closing in <b></b> milliseconds",
       timer: 1300,
       timerProgressBar: true,
@@ -128,7 +151,7 @@ function comingSoon() {
       }
     });
   });
-
+  
   nextB.addEventListener("click", () => {
     currentSongIndex++; // Incrementar el índice de la canción actual
     if (currentSongIndex >= songs.length) {
