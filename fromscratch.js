@@ -2,12 +2,18 @@ const songs = [
   {
     title: "the_violet_color",
     src: "assets/songs/the_violet_color_tory_lanes.mp3",
+    artist: "tory_lanez",
   },
   {
     title: "is_there_someone_else",
     src: "assets/songs/is_there_someone_else.mp3",
+    artist: "the_weeknd",
   },
-  // Agrega más canciones aquí
+  {
+    title: "chippin_in",
+    src: "assets/songs/chippin_in_samurai.mp3",
+    artist: "samurai",
+  },
 ];
 
 let imageCounter = 2;
@@ -20,7 +26,7 @@ function changeImage22() {
     imageCounter = 2;
   } else if (imageCounter === 2) {
     container.classList.add("megastyled");
-    container.innerHTML = `<img src="assets/v7c.gif" alt="visualizer_02" loading="lazy"/>`;
+    container.innerHTML = `<img src="assets/v5c.gif" alt="visualizer_02" loading="lazy"/>`;
     document.title = "visualizer_02";
     imageCounter = 3;
   } else if (imageCounter === 3) {
@@ -53,27 +59,55 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.src = songs[0].src;
 });
 
+
+function updateNowPlaying() {
+  let container = document.getElementById("main1");
+  console.log(currentSong);
+  if (currentSong === "chippin_in") {
+    if (audio.paused) {
+      container.innerHTML = `
+        <p id="playToReco" class="colored">play to re-connect</p>
+        <div class="loader"></div>
+      `;
+      document.title = "now_paused";
+    } else {
+      container.innerHTML = `<img src="assets/v8c.gif" alt="visualizer_05" loading="lazy"/>`;
+      document.title = "visualizer_05";
+      imageCounter = 5;
+    }
+  }
+}
+
+
+audio.addEventListener("play", updateNowPlaying);
+audio.addEventListener("pause", updateNowPlaying);
+
+
 //ALERT, JUST DELETE  THIS FUNCTION WHEN YOU ADD NEW SONGS
+let currentSong = null; // Variable global para almacenar el título de la canción actual
+
 function comingSoon() {
   let previousB = document.getElementById("previousButton");
   let nextB = document.getElementById("nextButton");
-  let currentSong = 0;
-  previousB.addEventListener("click", (x) => {
-    currentSong++; // Incrementar el índice de la canción actual
-    if (currentSong >= songs.length) {
-      currentSong = 0;
+  let currentSongIndex = 0;
+
+  previousB.addEventListener("click", () => {
+    currentSongIndex++; // Incrementar el índice de la canción actual
+    if (currentSongIndex >= songs.length) {
+      currentSongIndex = 0;
       // Volver al inicio de la lista
     }
 
-    imageCounter = imageCounter++;
-    const nextSong = songs[currentSong];
+    const nextSong = songs[currentSongIndex];
+    currentSong = nextSong.title; // Actualizar la variable global con el título de la canción
     audio.src = nextSong.src; // Actualizar la fuente del elemento de audio con la nueva canción
     audio.play(); // Reproducir la nueva canción
 
     changeImage22(); // Cambiar la imagen
+
     let timerInterval;
     Swal.fire({
-      title: `${songs[currentSong].title.toUpperCase()}()`,
+      title: `${nextSong.title.toUpperCase()}()`,
       html: "closing in <b></b> milliseconds",
       timer: 1300,
       timerProgressBar: true,
@@ -94,22 +128,24 @@ function comingSoon() {
       }
     });
   });
-  nextB.addEventListener("click", (x) => {
-    currentSong++; // Incrementar el índice de la canción actual
-    if (currentSong >= songs.length) {
-      currentSong = 0;
+
+  nextB.addEventListener("click", () => {
+    currentSongIndex++; // Incrementar el índice de la canción actual
+    if (currentSongIndex >= songs.length) {
+      currentSongIndex = 0;
       // Volver al inicio de la lista
     }
 
-    imageCounter = imageCounter++;
-    const nextSong = songs[currentSong];
+    const nextSong = songs[currentSongIndex];
+    currentSong = nextSong.title; // Actualizar la variable global con el título de la canción
     audio.src = nextSong.src; // Actualizar la fuente del elemento de audio con la nueva canción
     audio.play(); // Reproducir la nueva canción
 
     changeImage22(); // Cambiar la imagen
+
     let timerInterval;
     Swal.fire({
-      title: `${songs[currentSong].title.toUpperCase()}()`,
+      title: `${nextSong.title.toUpperCase()}()`,
       html: "closing in <b></b> milliseconds",
       timer: 1300,
       timerProgressBar: true,
@@ -131,6 +167,7 @@ function comingSoon() {
     });
   });
 }
+
 comingSoon();
 ////////////////////////////////////////////////////
 
