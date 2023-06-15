@@ -31,6 +31,8 @@ const songs = [
   },
 ];
 
+
+
 let imageCounter = 2;
 function changeImage22() {
   let container = document.getElementById("main1");
@@ -89,7 +91,8 @@ function updateNowPlaying() {
       document.title = "visualizer_05";
       imageCounter = 5;
     }
-  } if (currentSong === "stay_at_your_house") {
+  }
+  if (currentSong === "stay_at_your_house") {
     if (audio.paused) {
       container.innerHTML = `
         <p id="playToReco" class="colored">play to re-connect</p>
@@ -120,14 +123,14 @@ function comingSoon() {
     if (currentSongIndex < 0) {
       currentSongIndex = songs.length - 1; // Set the index to the last song in the array
     }
-  
+
     const previousSong = songs[currentSongIndex];
     currentSong = previousSong.title; // Update the variable global with the title of the previous song
     audio.src = previousSong.src; // Update the audio source with the new song
     audio.play(); // Play the new song
-  
+
     changeImage22(); // Change the image
-  
+
     let timerInterval;
     Swal.fire({
       title: `${previousSong.title.toUpperCase()}()`,
@@ -151,7 +154,7 @@ function comingSoon() {
       }
     });
   });
-  
+
   nextB.addEventListener("click", () => {
     currentSongIndex++; // Incrementar el índice de la canción actual
     if (currentSongIndex >= songs.length) {

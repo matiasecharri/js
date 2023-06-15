@@ -3,6 +3,12 @@
   margin: 0px;
   box-sizing: border-box;
 }
+.hiddentitle {
+  color: rgb(43, 87, 208);
+  position: absolute;
+  font-size: 1px;
+  display: none;
+}
 
 /* 🟣 🫧 Main container, inside of this is the visualizer*/
 main {
@@ -428,13 +434,6 @@ main img {
 #volumeBar.lighter2:hover::-moz-range-thumb {
   background-color: #985ca7;
 }
-
-
-
-
-
-
-
 
 .colored {
   color: #868686 !important;
