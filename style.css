@@ -3,11 +3,11 @@
   margin: 0px;
   box-sizing: border-box;
 }
-.hiddentitle {
-  color: rgb(43, 87, 208);
+.titleing{
+  color: rgba(248, 63, 2, 0);
   position: absolute;
   font-size: 1px;
-  display: none;
+  
 }
 
 /* 🟣 🫧 Main container, inside of this is the visualizer*/
