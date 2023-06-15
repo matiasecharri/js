@@ -16,7 +16,11 @@
   </head>
   <body>
     <audio id="myAudio"></audio>
-
+    <header>
+      <h1 class="titleing">visualizer_00</h1>
+      <h2 class="titleing">visualizer 00</h2>
+      <h3 class="titleing">visualizer-00</h3>
+    </header>
     <div class="interfacePlayer">
       <div class="buttonContainer" id="buttonContainerX">
         <!-- ////////////////////////////////////////CONTROLLS ///// -->
@@ -32,13 +36,19 @@
         <button class="ui-btn" id="nextButton"><span> NEXT > </span></button>
       </div>
       <!-- ////////////////////////////////////////CONTROLLS ///// -->
-      <input type="range" value="0" id="progressBar" />      
-      <input type="range" value="35" aria-valuemin="0" aria-valuemax="100" id="volumeBar" />      
-<div id="nowPlaying"></div>
+      <input type="range" value="0" id="progressBar" />
+      <input
+        type="range"
+        value="35"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        id="volumeBar"
+      />
+      <div id="nowPlaying"></div>
     </div>
-  
-    <main id="main1"></main>
 
+    <main id="main1"></main>
+<footer><p>Coded and designed by Matias Echarri</p></footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/fromscratch.js"></script>
