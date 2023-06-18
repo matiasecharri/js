@@ -100,7 +100,7 @@ function updateNowPlaying() {
       `;
       document.title = "now_paused";
     } else {
-      container.innerHTML = `<img src="assets/v9c.gif" alt="visualizer_09" loading="lazy"/>`;
+      container.innerHTML = `<img src="assets/v10c.gif" alt="visualizer_09" loading="lazy"/>`;
       document.title = "vEiRR0Rizer_09";
       imageCounter = 5;
     }
